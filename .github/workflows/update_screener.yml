@@ -1,0 +1,43 @@
+name: Daily Momentum Screener Update
+
+on:
+  schedule:
+    # 毎日 日本時間 8:00 に実行 (UTCの23:00)
+    - cron: '0 23 * * *'
+  # 手動実行も可能にする
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install uv (Fast Python Package Installer)
+        run: curl -LsSf https://astral.sh/uv/install.sh | sh
+
+      - name: Install Dependencies
+        run: |
+          uv pip install --system pandas yfinance requests openpyxl
+
+      - name: Run Data Generator
+        run: |
+          python generate_web_data.py
+
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs/data/latest.json
+          git commit -m "🚀 Auto-update momentum data" || echo "No changes to commit"
+          git push

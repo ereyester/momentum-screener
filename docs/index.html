@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="S&P500 + Nasdaq100 + 東証全銘柄からモメンタム最強銘柄を自動スクリーニング。毎日更新。">
+    <title>🦍 モメンタムチンパン | ユニバーススクリーナー</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        // Check saved theme or system preference before rendering to prevent flash
+        if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <h1 id="site-title"><span class="logo-icon">🦍</span> モメンタムチンパン</h1>
+                <p class="header-sub">S&P500 + Nasdaq100 + 東証プライム 全銘柄スクリーニング</p>
+            </div>
+            <div class="header-meta">
+                <button id="theme-toggle" class="theme-btn" title="テーマ切り替え">☀️</button>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">銘柄数</span>
+                    <span class="meta-value" id="stat-total">---</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">USD/JPY</span>
+                    <span class="meta-value" id="stat-usdjpy">---</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">更新</span>
+                    <span class="meta-value" id="stat-updated">---</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+
+        <!-- ===== TOP 3 PODIUM ===== -->
+        <section class="podium-section" id="podium-section">
+            <h2 class="section-title">🔥 モメンタム TOP 3</h2>
+            <div class="podium" id="podium-cards"></div>
+        </section>
+
+        <!-- ===== TABS ===== -->
+        <nav class="tab-nav" id="tab-nav">
+            <button class="tab-btn active" data-tab="ranking" id="tab-btn-ranking">📊 ランキング</button>
+            <button class="tab-btn" data-tab="deck" id="tab-btn-deck">🏆 最強デッキ</button>
+        </nav>
+
+        <!-- ===== RANKING ===== -->
+        <section id="tab-ranking" class="tab-content active">
+            <div class="toolbar">
+                <div class="filter-pills">
+                    <button class="pill active" data-market="ALL" id="filter-all">全体</button>
+                    <button class="pill" data-market="US" id="filter-us">🇺🇸 米国</button>
+                    <button class="pill" data-market="JP" id="filter-jp">🇯🇵 日本</button>
+                </div>
+                <span class="count-badge" id="result-count">0 銘柄</span>
+            </div>
+
+            <div class="table-wrap">
+                <table id="ranking-table" class="tbl">
+                    <thead>
+                        <tr>
+                            <th class="col-rank sortable" data-sort="rank">#</th>
+                            <th class="col-ticker sortable" data-sort="ticker">銘柄</th>
+                            <th class="col-name">名前</th>
+                            <th class="col-price sortable r" data-sort="price">現在値</th>
+                            <th class="col-chg sortable r" data-sort="day_chg">本日</th>
+                            <th class="col-ret sortable r" data-sort="ret_1m">1ヶ月</th>
+                            <th class="col-ret sortable r" data-sort="ret_3m">3ヶ月</th>
+                            <th class="col-ret sortable r" data-sort="ytd_chg">年初来</th>
+                            <th class="col-rsi sortable r" data-sort="rsi">RSI</th>
+                            <th class="col-score sortable r" data-sort="score">スコア</th>
+                            <th class="col-grade">Gr</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ranking-tbody"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- ===== DECK ===== -->
+        <section id="tab-deck" class="tab-content">
+            <div class="deck-top">
+                <h2 class="section-title">🏆 最強モメンタムデッキ</h2>
+                <div class="budget-ctrl">
+                    <label for="budget-input">予算</label>
+                    <input type="number" id="budget-input" value="3000" min="100" max="100000" step="100">
+                    <span>万円</span>
+                </div>
+            </div>
+
+            <div class="kpi-row" id="deck-kpi">
+                <div class="kpi">
+                    <div class="kpi-icon">💰</div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">実配分合計</span>
+                        <span class="kpi-value" id="deck-total-alloc">---</span>
+                    </div>
+                </div>
+                <div class="kpi">
+                    <div class="kpi-icon">💵</div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">残余資金</span>
+                        <span class="kpi-value" id="deck-remaining">---</span>
+                    </div>
+                </div>
+                <div class="kpi danger">
+                    <div class="kpi-icon">⚠️</div>
+                    <div class="kpi-body">
+                        <span class="kpi-label">最悪損失 (-7%)</span>
+                        <span class="kpi-value" id="deck-max-loss">---</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deck-cards" id="deck-cards"></div>
+
+            <div class="rules">
+                <span class="rule">🔴 損切: エントリーから <b>-7%</b> で即切り</span>
+                <span class="rule">🔴 決算ミス: <b>即切り</b></span>
+                <span class="rule">🟡 指値不成立: <b>追わない</b></span>
+            </div>
+        </section>
+    </main>
+
+    <footer id="site-footer">
+        <p>⚠️ 本サイトは情報提供目的です。投資判断はご自身でお願いします。</p>
+        <p class="footer-sm">Momentum Chimp Universe Screener — 毎朝自動更新</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
