@@ -1,0 +1,14 @@
+# Ignore everything
+/*
+
+# Except the following
+!/docs/
+!/generate_web_data.py
+!/universe_screener.py
+!/momentum_screener.py
+!/.github/
+!/.gitignore
+
+# Ignore cache and data within the allowed folders just in case
+__pycache__/
+*.pyc

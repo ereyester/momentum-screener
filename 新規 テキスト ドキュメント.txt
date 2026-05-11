@@ -1,1 +1,0 @@
-PS CUsersereyestertoushi3 uv run python universe_screener.py --top-us 10 --top-jp 6 --max-jp-price 20000 --aggressive
