@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-05-12 10:35:14",
-  "total_scanned": 2095,
+  "updated_at": "2026-05-12 11:38:23",
+  "total_scanned": 2090,
   "stats": {
-    "us_count": 521,
+    "us_count": 516,
     "jp_count": 1574,
-    "avg_score_us": 4.34,
+    "avg_score_us": 3.7,
     "avg_score_jp": 4.34
   },
   "usdjpy": 157.52,
@@ -35,30 +35,6 @@
     },
     {
       "rank": 2,
-      "ticker": "SOXL",
-      "name": "Direxion Daily Semiconductor Bu",
-      "market": "US",
-      "currency": "USD",
-      "price": 190.42,
-      "day_chg": 7.62,
-      "ret_1m": 136.37,
-      "ret_3m": 200.63,
-      "ret_6m": 356.21,
-      "ret_1y": 1015.45,
-      "ytd_chg": 303.09,
-      "rsi": 78.3,
-      "from_ath": 0.0,
-      "vol_ratio": 0.79,
-      "volatility": 0.073,
-      "score": 185.98,
-      "ma5": 165.89,
-      "ma20": 123.02,
-      "ma50": 82.63,
-      "high_52w": 190.42,
-      "low_52w": 15.68
-    },
-    {
-      "rank": 3,
       "ticker": "5801.T",
       "name": "古河電気工業",
       "market": "JP",
@@ -82,7 +58,7 @@
       "low_52w": 4894.52
     },
     {
-      "rank": 4,
+      "rank": 3,
       "ticker": "4392.T",
       "name": "ＦＩＧ",
       "market": "JP",
@@ -106,7 +82,7 @@
       "low_52w": 254.38
     },
     {
-      "rank": 5,
+      "rank": 4,
       "ticker": "INTC",
       "name": "Intel Corporation",
       "market": "US",
@@ -130,7 +106,7 @@
       "low_52w": 19.31
     },
     {
-      "rank": 6,
+      "rank": 5,
       "ticker": "285A.T",
       "name": "キオクシアホールディングス",
       "market": "JP",
@@ -154,7 +130,7 @@
       "low_52w": 1982.0
     },
     {
-      "rank": 7,
+      "rank": 6,
       "ticker": "5074.T",
       "name": "テスホールディングス",
       "market": "JP",
@@ -178,7 +154,7 @@
       "low_52w": 295.21
     },
     {
-      "rank": 8,
+      "rank": 7,
       "ticker": "6740.T",
       "name": "ジャパンディスプレイ",
       "market": "JP",
@@ -202,7 +178,7 @@
       "low_52w": 15.0
     },
     {
-      "rank": 9,
+      "rank": 8,
       "ticker": "MU",
       "name": "Micron Technology, Inc.",
       "market": "US",
@@ -226,7 +202,7 @@
       "low_52w": 92.07
     },
     {
-      "rank": 10,
+      "rank": 9,
       "ticker": "6387.T",
       "name": "サムコ",
       "market": "JP",
@@ -250,7 +226,7 @@
       "low_52w": 2400.22
     },
     {
-      "rank": 11,
+      "rank": 10,
       "ticker": "3436.T",
       "name": "ＳＵＭＣＯ",
       "market": "JP",
@@ -274,7 +250,7 @@
       "low_52w": 924.24
     },
     {
-      "rank": 12,
+      "rank": 11,
       "ticker": "6480.T",
       "name": "日本トムソン",
       "market": "JP",
@@ -298,7 +274,7 @@
       "low_52w": 475.73
     },
     {
-      "rank": 13,
+      "rank": 12,
       "ticker": "5706.T",
       "name": "三井金属",
       "market": "JP",
@@ -322,7 +298,7 @@
       "low_52w": 3969.24
     },
     {
-      "rank": 14,
+      "rank": 13,
       "ticker": "LITE",
       "name": "Lumentum Holdings Inc.",
       "market": "US",
@@ -346,7 +322,7 @@
       "low_52w": 71.73
     },
     {
-      "rank": 15,
+      "rank": 14,
       "ticker": "STX",
       "name": "Seagate Technology Holdings PLC",
       "market": "US",
@@ -370,7 +346,7 @@
       "low_52w": 100.65
     },
     {
-      "rank": 16,
+      "rank": 15,
       "ticker": "4062.T",
       "name": "イビデン",
       "market": "JP",
@@ -394,7 +370,7 @@
       "low_52w": 2455.77
     },
     {
-      "rank": 17,
+      "rank": 16,
       "ticker": "6235.T",
       "name": "オプトラン",
       "market": "JP",
@@ -418,7 +394,7 @@
       "low_52w": 1400.52
     },
     {
-      "rank": 18,
+      "rank": 17,
       "ticker": "6997.T",
       "name": "日本ケミコン",
       "market": "JP",
@@ -442,7 +418,7 @@
       "low_52w": 994.13
     },
     {
-      "rank": 19,
+      "rank": 18,
       "ticker": "WDC",
       "name": "Western Digital Corporation",
       "market": "US",
@@ -466,7 +442,7 @@
       "low_52w": 46.37
     },
     {
-      "rank": 20,
+      "rank": 19,
       "ticker": "AMD",
       "name": "Advanced Micro Devices, Inc.",
       "market": "US",
@@ -490,7 +466,7 @@
       "low_52w": 108.12
     },
     {
-      "rank": 21,
+      "rank": 20,
       "ticker": "6787.T",
       "name": "メイコー",
       "market": "JP",
@@ -514,7 +490,7 @@
       "low_52w": 5511.45
     },
     {
-      "rank": 22,
+      "rank": 21,
       "ticker": "4004.T",
       "name": "レゾナック・ホールディングス",
       "market": "JP",
@@ -538,7 +514,7 @@
       "low_52w": 2778.44
     },
     {
-      "rank": 23,
+      "rank": 22,
       "ticker": "4971.T",
       "name": "メック",
       "market": "JP",
@@ -562,7 +538,7 @@
       "low_52w": 2344.96
     },
     {
-      "rank": 24,
+      "rank": 23,
       "ticker": "3110.T",
       "name": "日東紡績",
       "market": "JP",
@@ -586,7 +562,7 @@
       "low_52w": 4041.08
     },
     {
-      "rank": 25,
+      "rank": 24,
       "ticker": "5803.T",
       "name": "フジクラ",
       "market": "JP",
@@ -610,7 +586,7 @@
       "low_52w": 946.59
     },
     {
-      "rank": 26,
+      "rank": 25,
       "ticker": "6324.T",
       "name": "ハーモニック・ドライブ・システムズ",
       "market": "JP",
@@ -634,7 +610,7 @@
       "low_52w": 2313.64
     },
     {
-      "rank": 27,
+      "rank": 26,
       "ticker": "7826.T",
       "name": "フルヤ金属",
       "market": "JP",
@@ -658,7 +634,7 @@
       "low_52w": 2254.0
     },
     {
-      "rank": 28,
+      "rank": 27,
       "ticker": "6779.T",
       "name": "日本電波工業",
       "market": "JP",
@@ -682,7 +658,7 @@
       "low_52w": 674.08
     },
     {
-      "rank": 29,
+      "rank": 28,
       "ticker": "268A.T",
       "name": "リガク・ホールディングス",
       "market": "JP",
@@ -706,7 +682,7 @@
       "low_52w": 689.87
     },
     {
-      "rank": 30,
+      "rank": 29,
       "ticker": "CIEN",
       "name": "Ciena Corporation",
       "market": "US",
@@ -730,31 +706,7 @@
       "low_52w": 72.16
     },
     {
-      "rank": 31,
-      "ticker": "TECL",
-      "name": "Direxion Daily Technology Bull ",
-      "market": "US",
-      "currency": "USD",
-      "price": 200.7,
-      "day_chg": 3.94,
-      "ret_1m": 78.13,
-      "ret_3m": 81.4,
-      "ret_6m": 65.31,
-      "ret_1y": 207.96,
-      "ytd_chg": 70.04,
-      "rsi": 84.6,
-      "from_ath": 0.0,
-      "vol_ratio": 0.87,
-      "volatility": 0.04,
-      "score": 68.73,
-      "ma5": 181.56,
-      "ma20": 149.87,
-      "ma50": 118.19,
-      "high_52w": 200.7,
-      "low_52w": 64.11
-    },
-    {
-      "rank": 32,
+      "rank": 30,
       "ticker": "6866.T",
       "name": "日置電機",
       "market": "JP",
@@ -778,7 +730,7 @@
       "low_52w": 5194.98
     },
     {
-      "rank": 33,
+      "rank": 31,
       "ticker": "6101.T",
       "name": "ツガミ",
       "market": "JP",
@@ -802,7 +754,7 @@
       "low_52w": 1730.08
     },
     {
-      "rank": 34,
+      "rank": 32,
       "ticker": "6516.T",
       "name": "山洋電気",
       "market": "JP",
@@ -826,7 +778,7 @@
       "low_52w": 2970.27
     },
     {
-      "rank": 35,
+      "rank": 33,
       "ticker": "6617.T",
       "name": "東光高岳",
       "market": "JP",
@@ -850,7 +802,7 @@
       "low_52w": 2098.9
     },
     {
-      "rank": 36,
+      "rank": 34,
       "ticker": "4022.T",
       "name": "ラサ工業",
       "market": "JP",
@@ -874,7 +826,7 @@
       "low_52w": 533.11
     },
     {
-      "rank": 37,
+      "rank": 35,
       "ticker": "3445.T",
       "name": "ＲＳ　Ｔｅｃｈｎｏｌｏｇｉｅｓ",
       "market": "JP",
@@ -898,7 +850,7 @@
       "low_52w": 2728.48
     },
     {
-      "rank": 38,
+      "rank": 36,
       "ticker": "7236.T",
       "name": "ティラド",
       "market": "JP",
@@ -922,7 +874,7 @@
       "low_52w": 3679.46
     },
     {
-      "rank": 39,
+      "rank": 37,
       "ticker": "6981.T",
       "name": "村田製作所",
       "market": "JP",
@@ -946,7 +898,7 @@
       "low_52w": 1984.63
     },
     {
-      "rank": 40,
+      "rank": 38,
       "ticker": "6800.T",
       "name": "ヨコオ",
       "market": "JP",
@@ -970,7 +922,7 @@
       "low_52w": 1157.63
     },
     {
-      "rank": 41,
+      "rank": 39,
       "ticker": "6264.T",
       "name": "マルマエ",
       "market": "JP",
@@ -994,7 +946,7 @@
       "low_52w": 578.9
     },
     {
-      "rank": 42,
+      "rank": 40,
       "ticker": "7220.T",
       "name": "武蔵精密工業",
       "market": "JP",
@@ -1018,7 +970,7 @@
       "low_52w": 2216.67
     },
     {
-      "rank": 43,
+      "rank": 41,
       "ticker": "6134.T",
       "name": "ＦＵＪＩ",
       "market": "JP",
@@ -1042,7 +994,7 @@
       "low_52w": 2092.5
     },
     {
-      "rank": 44,
+      "rank": 42,
       "ticker": "ON",
       "name": "ON Semiconductor Corporation",
       "market": "US",
@@ -1066,7 +1018,7 @@
       "low_52w": 41.27
     },
     {
-      "rank": 45,
+      "rank": 43,
       "ticker": "MRVL",
       "name": "Marvell Technology, Inc.",
       "market": "US",
@@ -1090,7 +1042,7 @@
       "low_52w": 59.95
     },
     {
-      "rank": 46,
+      "rank": 44,
       "ticker": "9412.T",
       "name": "スカパーＪＳＡＴ",
       "market": "JP",
@@ -1114,7 +1066,7 @@
       "low_52w": 1140.58
     },
     {
-      "rank": 47,
+      "rank": 45,
       "ticker": "QCOM",
       "name": "QUALCOMM Incorporated",
       "market": "US",
@@ -1138,7 +1090,7 @@
       "low_52w": 124.07
     },
     {
-      "rank": 48,
+      "rank": 46,
       "ticker": "AKAM",
       "name": "Akamai Technologies, Inc.",
       "market": "US",
@@ -1162,7 +1114,7 @@
       "low_52w": 70.53
     },
     {
-      "rank": 49,
+      "rank": 47,
       "ticker": "COHR",
       "name": "Coherent Corp.",
       "market": "US",
@@ -1186,7 +1138,7 @@
       "low_52w": 75.63
     },
     {
-      "rank": 50,
+      "rank": 48,
       "ticker": "4368.T",
       "name": "扶桑化学工業",
       "market": "JP",
@@ -1208,6 +1160,54 @@
       "ma50": 3040.05,
       "high_52w": 3990.0,
       "low_52w": 1166.39
+    },
+    {
+      "rank": 49,
+      "ticker": "6941.T",
+      "name": "山一電機",
+      "market": "JP",
+      "currency": "JPY",
+      "price": 10960.0,
+      "day_chg": 1.48,
+      "ret_1m": 22.6,
+      "ret_3m": 64.8,
+      "ret_6m": 148.4,
+      "ret_1y": 422.84,
+      "ytd_chg": 88.63,
+      "rsi": 53.4,
+      "from_ath": 0.0,
+      "vol_ratio": 1.08,
+      "volatility": 0.034,
+      "score": 58.16,
+      "ma5": 10658.0,
+      "ma20": 10234.0,
+      "ma50": 9162.77,
+      "high_52w": 10960.0,
+      "low_52w": 2096.23
+    },
+    {
+      "rank": 50,
+      "ticker": "6278.T",
+      "name": "ユニオンツール",
+      "market": "JP",
+      "currency": "JPY",
+      "price": 18660.0,
+      "day_chg": 5.78,
+      "ret_1m": 22.36,
+      "ret_3m": 72.78,
+      "ret_6m": 130.6,
+      "ret_1y": 397.64,
+      "ytd_chg": 115.47,
+      "rsi": 60.3,
+      "from_ath": 0.0,
+      "vol_ratio": 1.39,
+      "volatility": 0.043,
+      "score": 56.9,
+      "ma5": 17222.0,
+      "ma20": 16804.5,
+      "ma50": 15602.2,
+      "high_52w": 18660.0,
+      "low_52w": 3710.48
     }
   ],
   "deck": {
@@ -1229,22 +1229,6 @@
         "entry_price": 1453.23,
         "stop_price": 1351.5,
         "target_price": 1907.15
-      },
-      {
-        "ticker": "SOXL",
-        "name": "Direxion Daily Semiconductor Bu",
-        "market": "US",
-        "currency": "USD",
-        "price": 190.42,
-        "ret_1m": 136.37,
-        "ret_3m": 200.63,
-        "rsi": 78.3,
-        "score": 185.98,
-        "shares": 71,
-        "alloc_man": 186,
-        "entry_price": 165.89,
-        "stop_price": 154.28,
-        "target_price": 248.83
       },
       {
         "ticker": "INTC",
@@ -1359,20 +1343,36 @@
         "target_price": 641.68
       },
       {
-        "ticker": "TECL",
-        "name": "Direxion Daily Technology Bull ",
+        "ticker": "ON",
+        "name": "ON Semiconductor Corporation",
         "market": "US",
         "currency": "USD",
-        "price": 200.7,
-        "ret_1m": 78.13,
-        "ret_3m": 81.4,
-        "rsi": 84.6,
-        "score": 68.73,
-        "shares": 65,
+        "price": 107.24,
+        "ret_1m": 51.0,
+        "ret_3m": 59.16,
+        "rsi": 73.7,
+        "score": 62.99,
+        "shares": 114,
+        "alloc_man": 187,
+        "entry_price": 103.9,
+        "stop_price": 96.63,
+        "target_price": 130.39
+      },
+      {
+        "ticker": "MRVL",
+        "name": "Marvell Technology, Inc.",
+        "market": "US",
+        "currency": "USD",
+        "price": 170.84,
+        "ret_1m": 30.11,
+        "ret_3m": 108.42,
+        "rsi": 63.7,
+        "score": 62.2,
+        "shares": 70,
         "alloc_man": 186,
-        "entry_price": 181.56,
-        "stop_price": 168.85,
-        "target_price": 252.49
+        "entry_price": 168.38,
+        "stop_price": 156.59,
+        "target_price": 193.73
       },
       {
         "ticker": "5801.T",
@@ -1471,8 +1471,8 @@
         "target_price": 14082.6
       }
     ],
-    "total_alloc_man": 2521,
-    "remaining_man": 479,
-    "max_loss_man": 176
+    "total_alloc_man": 2522,
+    "remaining_man": 478,
+    "max_loss_man": 177
   }
 }
