@@ -27,7 +27,7 @@ jobs:
       - name: Install Dependencies
         run: |
           pip install --upgrade pip
-          pip install pandas yfinance requests openpyxl lxml tabulate colorama numpy
+          pip install pandas yfinance requests openpyxl lxml tabulate colorama numpy xlrd
 
       - name: Run Data Generator
         run: |
