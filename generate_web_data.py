@@ -187,7 +187,7 @@ def main():
         include_sp500=True,
         include_ndx=True,
         include_jpx=True,
-        include_leverage=True,
+        include_leverage=False,
     )
     if not universe:
         print("銘柄リストを取得できませんでした。")

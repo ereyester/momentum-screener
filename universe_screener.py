@@ -139,7 +139,7 @@ LEVERAGED_ETFS = [
 
 def get_universe(include_sp500: bool = True, include_ndx: bool = True,
                  include_jpx: bool = True,
-                 include_leverage: bool = True) -> dict[str, str]:
+                 include_leverage: bool = False) -> dict[str, str]:
     """
     Returns: {ticker: market}  market = "US" or "JP"
     include_leverage=True でレバレッジETFをユニバースに追加（デフォルトON）
