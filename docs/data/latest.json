@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-05-15 23:56:34",
+  "updated_at": "2026-05-16 23:55:48",
   "total_scanned": 2090,
   "stats": {
     "us_count": 516,
     "jp_count": 1574,
-    "avg_score_us": 1.79,
-    "avg_score_jp": 4.7
+    "avg_score_us": 1.81,
+    "avg_score_jp": 4.77
   },
   "usdjpy": 158.73,
   "ranking": [
@@ -36,7 +36,7 @@
     {
       "rank": 2,
       "ticker": "SNDK",
-      "name": "SNDK",
+      "name": "Sandisk Corporation",
       "market": "US",
       "currency": "USD",
       "price": 1407.61,
@@ -48,7 +48,7 @@
       "ytd_chg": 411.41,
       "rsi": 67.3,
       "from_ath": -9.9,
-      "vol_ratio": 0.9,
+      "vol_ratio": 0.92,
       "volatility": 0.064,
       "score": 158.22,
       "ma5": 1447.43,
@@ -132,7 +132,7 @@
     {
       "rank": 6,
       "ticker": "INTC",
-      "name": "INTC",
+      "name": "Intel Corporation",
       "market": "US",
       "currency": "USD",
       "price": 108.77,
@@ -144,7 +144,7 @@
       "ytd_chg": 176.21,
       "rsi": 64.7,
       "from_ath": -15.97,
-      "vol_ratio": 0.84,
+      "vol_ratio": 0.86,
       "volatility": 0.078,
       "score": 104.76,
       "ma5": 119.01,
@@ -228,7 +228,7 @@
     {
       "rank": 10,
       "ticker": "MU",
-      "name": "MU",
+      "name": "Micron Technology, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 724.66,
@@ -240,7 +240,7 @@
       "ytd_chg": 129.84,
       "rsi": 70.1,
       "from_ath": -9.83,
-      "vol_ratio": 1.01,
+      "vol_ratio": 1.02,
       "volatility": 0.056,
       "score": 89.31,
       "ma5": 773.24,
@@ -300,7 +300,7 @@
     {
       "rank": 13,
       "ticker": "LITE",
-      "name": "LITE",
+      "name": "Lumentum Holdings Inc.",
       "market": "US",
       "currency": "USD",
       "price": 970.7,
@@ -324,7 +324,7 @@
     {
       "rank": 14,
       "ticker": "STX",
-      "name": "STX",
+      "name": "Seagate Technology Holdings PLC",
       "market": "US",
       "currency": "USD",
       "price": 795.47,
@@ -402,20 +402,20 @@
       "price": 7993.0,
       "day_chg": 11.0,
       "ret_1m": 45.12,
-      "ret_3m": 101.59,
-      "ret_6m": 177.74,
-      "ret_1y": 276.18,
-      "ytd_chg": 116.02,
+      "ret_3m": 101.99,
+      "ret_6m": 178.31,
+      "ret_1y": 276.94,
+      "ytd_chg": 116.45,
       "rsi": 88.7,
       "from_ath": 0.0,
       "vol_ratio": 4.09,
       "volatility": 0.034,
-      "score": 84.07,
+      "score": 84.31,
       "ma5": 7163.2,
       "ma20": 6255.75,
-      "ma50": 5621.18,
+      "ma50": 5617.14,
       "high_52w": 7993.0,
-      "low_52w": 2092.5
+      "low_52w": 2088.29
     },
     {
       "rank": 18,
@@ -540,7 +540,7 @@
     {
       "rank": 23,
       "ticker": "WDC",
-      "name": "WDC",
+      "name": "Western Digital Corporation",
       "market": "US",
       "currency": "USD",
       "price": 482.02,
@@ -612,7 +612,7 @@
     {
       "rank": 26,
       "ticker": "MRVL",
-      "name": "MRVL",
+      "name": "Marvell Technology, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 176.89,
@@ -636,7 +636,7 @@
     {
       "rank": 27,
       "ticker": "AMD",
-      "name": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 424.1,
@@ -684,7 +684,7 @@
     {
       "rank": 29,
       "ticker": "CIEN",
-      "name": "CIEN",
+      "name": "Ciena Corporation",
       "market": "US",
       "currency": "USD",
       "price": 554.46,
@@ -948,7 +948,7 @@
     {
       "rank": 40,
       "ticker": "COHR",
-      "name": "COHR",
+      "name": "Coherent Corp.",
       "market": "US",
       "currency": "USD",
       "price": 382.45,
@@ -996,7 +996,7 @@
     {
       "rank": 42,
       "ticker": "ON",
-      "name": "ON",
+      "name": "ON Semiconductor Corporation",
       "market": "US",
       "currency": "USD",
       "price": 113.11,
@@ -1020,7 +1020,7 @@
     {
       "rank": 43,
       "ticker": "DELL",
-      "name": "DELL",
+      "name": "Dell Technologies Inc.",
       "market": "US",
       "currency": "USD",
       "price": 241.99,
@@ -1216,7 +1216,7 @@
     "stocks": [
       {
         "ticker": "SNDK",
-        "name": "SNDK",
+        "name": "Sandisk Corporation",
         "market": "US",
         "currency": "USD",
         "price": 1407.61,
@@ -1232,7 +1232,7 @@
       },
       {
         "ticker": "INTC",
-        "name": "INTC",
+        "name": "Intel Corporation",
         "market": "US",
         "currency": "USD",
         "price": 108.77,
@@ -1248,7 +1248,7 @@
       },
       {
         "ticker": "MU",
-        "name": "MU",
+        "name": "Micron Technology, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 724.66,
@@ -1264,7 +1264,7 @@
       },
       {
         "ticker": "LITE",
-        "name": "LITE",
+        "name": "Lumentum Holdings Inc.",
         "market": "US",
         "currency": "USD",
         "price": 970.7,
@@ -1280,7 +1280,7 @@
       },
       {
         "ticker": "STX",
-        "name": "STX",
+        "name": "Seagate Technology Holdings PLC",
         "market": "US",
         "currency": "USD",
         "price": 795.47,
@@ -1296,7 +1296,7 @@
       },
       {
         "ticker": "WDC",
-        "name": "WDC",
+        "name": "Western Digital Corporation",
         "market": "US",
         "currency": "USD",
         "price": 482.02,
@@ -1312,7 +1312,7 @@
       },
       {
         "ticker": "MRVL",
-        "name": "MRVL",
+        "name": "Marvell Technology, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 176.89,
@@ -1328,7 +1328,7 @@
       },
       {
         "ticker": "AMD",
-        "name": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 424.1,
@@ -1344,7 +1344,7 @@
       },
       {
         "ticker": "CIEN",
-        "name": "CIEN",
+        "name": "Ciena Corporation",
         "market": "US",
         "currency": "USD",
         "price": 554.46,
@@ -1360,7 +1360,7 @@
       },
       {
         "ticker": "COHR",
-        "name": "COHR",
+        "name": "Coherent Corp.",
         "market": "US",
         "currency": "USD",
         "price": 382.45,
