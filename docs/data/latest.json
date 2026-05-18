@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-16 23:55:48",
+  "updated_at": "2026-05-18 00:00:26",
   "total_scanned": 2090,
   "stats": {
     "us_count": 516,
@@ -7,7 +7,7 @@
     "avg_score_us": 1.81,
     "avg_score_jp": 4.77
   },
-  "usdjpy": 158.73,
+  "usdjpy": 158.86,
   "ranking": [
     {
       "rank": 1,
@@ -716,7 +716,7 @@
       "ret_1m": 47.13,
       "ret_3m": 72.87,
       "ret_6m": 121.82,
-      "ret_1y": 211.99,
+      "ret_1y": 199.57,
       "ytd_chg": 86.31,
       "rsi": 84.8,
       "from_ath": 0.0,
@@ -1172,7 +1172,7 @@
       "ret_1m": 35.01,
       "ret_3m": 85.91,
       "ret_6m": 62.36,
-      "ret_1y": 88.52,
+      "ret_1y": 98.53,
       "ytd_chg": 104.25,
       "rsi": 85.7,
       "from_ath": 0.0,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 158.73,
+    "usdjpy": 158.86,
     "stocks": [
       {
         "ticker": "SNDK",
@@ -1240,8 +1240,8 @@
         "ret_3m": 135.53,
         "rsi": 64.7,
         "score": 104.76,
-        "shares": 121,
-        "alloc_man": 187,
+        "shares": 120,
+        "alloc_man": 186,
         "entry_price": 97.57,
         "stop_price": 90.74,
         "target_price": 126.25
@@ -1257,7 +1257,7 @@
         "rsi": 70.1,
         "score": 89.31,
         "shares": 16,
-        "alloc_man": 181,
+        "alloc_man": 182,
         "entry_price": 714.29,
         "stop_price": 664.29,
         "target_price": 787.56
