@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-23 23:57:38",
+  "updated_at": "2026-05-25 00:02:09",
   "total_scanned": 2090,
   "stats": {
     "us_count": 516,
@@ -7,7 +7,7 @@
     "avg_score_us": 5.09,
     "avg_score_jp": 3.86
   },
-  "usdjpy": 159.15,
+  "usdjpy": 158.92,
   "ranking": [
     {
       "rank": 1,
@@ -20,7 +20,7 @@
       "ret_1m": 431.25,
       "ret_3m": 397.21,
       "ret_6m": 485.88,
-      "ret_1y": 593.8,
+      "ret_1y": 588.62,
       "ytd_chg": 526.32,
       "rsi": 83.9,
       "from_ath": -9.89,
@@ -31,12 +31,12 @@
       "ma20": 755.95,
       "ma50": 494.5,
       "high_52w": 1981.0,
-      "low_52w": 257.28
+      "low_52w": 259.21
     },
     {
       "rank": 2,
       "ticker": "SNDK",
-      "name": "SNDK",
+      "name": "Sandisk Corporation",
       "market": "US",
       "currency": "USD",
       "price": 1478.69,
@@ -92,7 +92,7 @@
       "ret_1m": 24.56,
       "ret_3m": 155.7,
       "ret_6m": 458.72,
-      "ret_1y": 765.94,
+      "ret_1y": 731.29,
       "ytd_chg": 412.5,
       "rsi": 63.6,
       "from_ath": -7.71,
@@ -103,7 +103,7 @@
       "ma20": 47830.5,
       "ma50": 39977.04,
       "high_52w": 58130.0,
-      "low_52w": 6195.59
+      "low_52w": 6453.82
     },
     {
       "rank": 5,
@@ -116,7 +116,7 @@
       "ret_1m": 58.92,
       "ret_3m": 124.98,
       "ret_6m": 369.87,
-      "ret_1y": 653.08,
+      "ret_1y": 666.27,
       "ytd_chg": 306.31,
       "rsi": 66.3,
       "from_ath": 0.0,
@@ -132,7 +132,7 @@
     {
       "rank": 6,
       "ticker": "INTC",
-      "name": "INTC",
+      "name": "Intel Corporation",
       "market": "US",
       "currency": "USD",
       "price": 119.84,
@@ -164,7 +164,7 @@
       "ret_1m": 83.51,
       "ret_3m": 118.53,
       "ret_6m": 227.2,
-      "ret_1y": 299.44,
+      "ret_1y": 295.52,
       "ytd_chg": 233.61,
       "rsi": 68.9,
       "from_ath": -6.22,
@@ -175,7 +175,7 @@
       "ma20": 917.3,
       "ma50": 740.38,
       "high_52w": 1270.0,
-      "low_52w": 295.21
+      "low_52w": 301.12
     },
     {
       "rank": 8,
@@ -188,7 +188,7 @@
       "ret_1m": 101.04,
       "ret_3m": 115.6,
       "ret_6m": 181.43,
-      "ret_1y": 644.65,
+      "ret_1y": 618.26,
       "ytd_chg": 169.42,
       "rsi": 77.6,
       "from_ath": 0.0,
@@ -199,7 +199,7 @@
       "ma20": 14750.75,
       "ma50": 11004.16,
       "high_52w": 19250.0,
-      "low_52w": 2585.1
+      "low_52w": 2680.11
     },
     {
       "rank": 9,
@@ -212,7 +212,7 @@
       "ret_1m": 97.89,
       "ret_3m": 101.36,
       "ret_6m": 196.92,
-      "ret_1y": 322.31,
+      "ret_1y": 324.82,
       "ytd_chg": 154.5,
       "rsi": 84.6,
       "from_ath": 0.0,
@@ -236,7 +236,7 @@
       "ret_1m": 86.27,
       "ret_3m": 78.98,
       "ret_6m": 205.93,
-      "ret_1y": 271.1,
+      "ret_1y": 270.21,
       "ytd_chg": 169.34,
       "rsi": 86.1,
       "from_ath": 0.0,
@@ -252,7 +252,7 @@
     {
       "rank": 11,
       "ticker": "MU",
-      "name": "MU",
+      "name": "Micron Technology, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 751.0,
@@ -276,7 +276,7 @@
     {
       "rank": 12,
       "ticker": "STX",
-      "name": "STX",
+      "name": "Seagate Technology Holdings PLC",
       "market": "US",
       "currency": "USD",
       "price": 812.73,
@@ -300,7 +300,7 @@
     {
       "rank": 13,
       "ticker": "DELL",
-      "name": "DELL",
+      "name": "Dell Technologies Inc.",
       "market": "US",
       "currency": "USD",
       "price": 295.19,
@@ -332,7 +332,7 @@
       "ret_1m": 41.15,
       "ret_3m": 112.71,
       "ret_6m": 181.28,
-      "ret_1y": 234.83,
+      "ret_1y": 230.93,
       "ytd_chg": 127.01,
       "rsi": 70.8,
       "from_ath": -1.46,
@@ -343,7 +343,7 @@
       "ma20": 2839.75,
       "ma50": 2112.47,
       "high_52w": 3415.0,
-      "low_52w": 1004.98
+      "low_52w": 1016.82
     },
     {
       "rank": 15,
@@ -356,7 +356,7 @@
       "ret_1m": 50.57,
       "ret_3m": 106.23,
       "ret_6m": 172.05,
-      "ret_1y": 234.1,
+      "ret_1y": 241.16,
       "ytd_chg": 119.25,
       "rsi": 67.1,
       "from_ath": -15.51,
@@ -380,7 +380,7 @@
       "ret_1m": 46.29,
       "ret_3m": 107.07,
       "ret_6m": 173.96,
-      "ret_1y": 291.7,
+      "ret_1y": 300.27,
       "ytd_chg": 150.54,
       "rsi": 80.0,
       "from_ath": 0.0,
@@ -396,7 +396,7 @@
     {
       "rank": 17,
       "ticker": "MRVL",
-      "name": "MRVL",
+      "name": "Marvell Technology, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 196.33,
@@ -452,7 +452,7 @@
       "ret_1m": 65.18,
       "ret_3m": 132.43,
       "ret_6m": 77.94,
-      "ret_1y": 113.99,
+      "ret_1y": 107.89,
       "ytd_chg": 115.21,
       "rsi": 61.2,
       "from_ath": -10.63,
@@ -468,7 +468,7 @@
     {
       "rank": 20,
       "ticker": "WDC",
-      "name": "WDC",
+      "name": "Western Digital Corporation",
       "market": "US",
       "currency": "USD",
       "price": 484.28,
@@ -500,7 +500,7 @@
       "ret_1m": 44.08,
       "ret_3m": 71.36,
       "ret_6m": 208.96,
-      "ret_1y": 532.54,
+      "ret_1y": 527.2,
       "ytd_chg": 166.78,
       "rsi": 69.8,
       "from_ath": -3.64,
@@ -511,7 +511,7 @@
       "ma20": 15794.5,
       "ma50": 13265.74,
       "high_52w": 18690.0,
-      "low_52w": 2847.25
+      "low_52w": 2871.51
     },
     {
       "rank": 22,
@@ -524,7 +524,7 @@
       "ret_1m": 55.26,
       "ret_3m": 87.39,
       "ret_6m": 160.66,
-      "ret_1y": 105.34,
+      "ret_1y": 108.07,
       "ytd_chg": 83.0,
       "rsi": 69.4,
       "from_ath": -1.27,
@@ -540,7 +540,7 @@
     {
       "rank": 23,
       "ticker": "ARM",
-      "name": "ARM",
+      "name": "Arm Holdings plc",
       "market": "US",
       "currency": "USD",
       "price": 306.51,
@@ -572,7 +572,7 @@
       "ret_1m": 24.5,
       "ret_3m": 99.16,
       "ret_6m": 194.67,
-      "ret_1y": 386.05,
+      "ret_1y": 351.19,
       "ytd_chg": 160.46,
       "rsi": 53.5,
       "from_ath": -17.26,
@@ -583,7 +583,7 @@
       "ma20": 11783.0,
       "ma50": 9641.6,
       "high_52w": 14370.0,
-      "low_52w": 2446.25
+      "low_52w": 2566.7
     },
     {
       "rank": 25,
@@ -596,7 +596,7 @@
       "ret_1m": 50.49,
       "ret_3m": 105.11,
       "ret_6m": 127.69,
-      "ret_1y": 249.93,
+      "ret_1y": 253.41,
       "ytd_chg": 116.13,
       "rsi": 91.9,
       "from_ath": 0.0,
@@ -620,7 +620,7 @@
       "ret_1m": 28.18,
       "ret_3m": 116.22,
       "ret_6m": 151.04,
-      "ret_1y": 272.51,
+      "ret_1y": 268.26,
       "ytd_chg": 151.29,
       "rsi": 74.4,
       "from_ath": 0.0,
@@ -631,12 +631,12 @@
       "ma20": 2095.65,
       "ma50": 1660.24,
       "high_52w": 2511.0,
-      "low_52w": 674.08
+      "low_52w": 681.86
     },
     {
       "rank": 27,
       "ticker": "LITE",
-      "name": "LITE",
+      "name": "Lumentum Holdings Inc.",
       "market": "US",
       "currency": "USD",
       "price": 946.9,
@@ -668,7 +668,7 @@
       "ret_1m": 55.32,
       "ret_3m": 65.83,
       "ret_6m": 164.61,
-      "ret_1y": 205.8,
+      "ret_1y": 198.36,
       "ytd_chg": 104.56,
       "rsi": 84.2,
       "from_ath": 0.0,
@@ -679,12 +679,12 @@
       "ma20": 2622.2,
       "ma50": 2195.65,
       "high_52w": 3355.0,
-      "low_52w": 1097.12
+      "low_52w": 1115.7
     },
     {
       "rank": 29,
       "ticker": "AMD",
-      "name": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 467.51,
@@ -716,7 +716,7 @@
       "ret_1m": 39.83,
       "ret_3m": 81.5,
       "ret_6m": 160.27,
-      "ret_1y": 979.38,
+      "ret_1y": 939.65,
       "ytd_chg": 168.04,
       "rsi": 62.1,
       "from_ath": -9.64,
@@ -727,7 +727,7 @@
       "ma20": 45016.5,
       "ma50": 37444.17,
       "high_52w": 54900.0,
-      "low_52w": 4596.15
+      "low_52w": 4603.06
     },
     {
       "rank": 31,
@@ -756,7 +756,7 @@
     {
       "rank": 32,
       "ticker": "CIEN",
-      "name": "CIEN",
+      "name": "Ciena Corporation",
       "market": "US",
       "currency": "USD",
       "price": 583.74,
@@ -788,7 +788,7 @@
       "ret_1m": 39.23,
       "ret_3m": 51.35,
       "ret_6m": 198.22,
-      "ret_1y": 304.98,
+      "ret_1y": 300.18,
       "ytd_chg": 182.75,
       "rsi": 69.1,
       "from_ath": -6.15,
@@ -804,7 +804,7 @@
     {
       "rank": 34,
       "ticker": "DDOG",
-      "name": "DDOG",
+      "name": "Datadog, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 222.32,
@@ -836,7 +836,7 @@
       "ret_1m": 67.03,
       "ret_3m": 81.05,
       "ret_6m": 75.45,
-      "ret_1y": 112.88,
+      "ret_1y": 116.33,
       "ytd_chg": 55.4,
       "rsi": 79.9,
       "from_ath": -2.25,
@@ -860,7 +860,7 @@
       "ret_1m": 57.71,
       "ret_3m": 57.61,
       "ret_6m": 129.15,
-      "ret_1y": 257.68,
+      "ret_1y": 249.53,
       "ytd_chg": 110.81,
       "rsi": 78.5,
       "from_ath": -4.3,
@@ -871,7 +871,7 @@
       "ma20": 3364.8,
       "ma50": 2875.74,
       "high_52w": 4540.0,
-      "low_52w": 1214.76
+      "low_52w": 1243.1
     },
     {
       "rank": 37,
@@ -884,7 +884,7 @@
       "ret_1m": 37.94,
       "ret_3m": 50.42,
       "ret_6m": 159.92,
-      "ret_1y": 265.5,
+      "ret_1y": 268.15,
       "ytd_chg": 114.42,
       "rsi": 76.6,
       "from_ath": -0.94,
@@ -932,7 +932,7 @@
       "ret_1m": 27.77,
       "ret_3m": 62.71,
       "ret_6m": 157.84,
-      "ret_1y": 469.2,
+      "ret_1y": 454.55,
       "ytd_chg": 143.88,
       "rsi": 66.9,
       "from_ath": -5.55,
@@ -943,7 +943,7 @@
       "ma20": 18089.0,
       "ma50": 16244.6,
       "high_52w": 22360.0,
-      "low_52w": 3710.48
+      "low_52w": 3808.51
     },
     {
       "rank": 40,
@@ -972,7 +972,7 @@
     {
       "rank": 41,
       "ticker": "FTNT",
-      "name": "FTNT",
+      "name": "Fortinet, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 133.93,
@@ -1004,7 +1004,7 @@
       "ret_1m": 47.04,
       "ret_3m": 83.77,
       "ret_6m": 83.63,
-      "ret_1y": 396.7,
+      "ret_1y": 384.78,
       "ytd_chg": 151.7,
       "rsi": 80.8,
       "from_ath": 0.0,
@@ -1015,7 +1015,7 @@
       "ma20": 1644.7,
       "ma50": 1506.13,
       "high_52w": 2410.0,
-      "low_52w": 485.21
+      "low_52w": 490.18
     },
     {
       "rank": 43,
@@ -1028,7 +1028,7 @@
       "ret_1m": 32.75,
       "ret_3m": 84.55,
       "ret_6m": 109.68,
-      "ret_1y": 206.97,
+      "ret_1y": 188.23,
       "ytd_chg": 103.26,
       "rsi": 68.4,
       "from_ath": 0.0,
@@ -1039,7 +1039,7 @@
       "ma20": 4047.05,
       "ma50": 3424.49,
       "high_52w": 4601.0,
-      "low_52w": 1498.84
+      "low_52w": 1572.78
     },
     {
       "rank": 44,
@@ -1052,7 +1052,7 @@
       "ret_1m": 28.12,
       "ret_3m": 56.77,
       "ret_6m": 156.72,
-      "ret_1y": 266.88,
+      "ret_1y": 262.0,
       "ytd_chg": 111.55,
       "rsi": 80.4,
       "from_ath": 0.0,
@@ -1063,12 +1063,12 @@
       "ma20": 3726.75,
       "ma50": 3289.92,
       "high_52w": 4260.0,
-      "low_52w": 1160.16
+      "low_52w": 1176.8
     },
     {
       "rank": 45,
       "ticker": "ON",
-      "name": "ON",
+      "name": "ON Semiconductor Corporation",
       "market": "US",
       "currency": "USD",
       "price": 116.2,
@@ -1100,7 +1100,7 @@
       "ret_1m": 48.91,
       "ret_3m": 97.11,
       "ret_6m": 48.91,
-      "ret_1y": 28.2,
+      "ret_1y": 30.65,
       "ytd_chg": 130.41,
       "rsi": 86.8,
       "from_ath": 0.0,
@@ -1124,7 +1124,7 @@
       "ret_1m": 43.74,
       "ret_3m": 87.66,
       "ret_6m": 73.02,
-      "ret_1y": 134.68,
+      "ret_1y": 131.96,
       "ytd_chg": 69.43,
       "rsi": 68.1,
       "from_ath": -6.97,
@@ -1135,7 +1135,7 @@
       "ma20": 6131.25,
       "ma50": 4867.9,
       "high_52w": 7030.0,
-      "low_52w": 2786.78
+      "low_52w": 2819.39
     },
     {
       "rank": 48,
@@ -1148,7 +1148,7 @@
       "ret_1m": 20.57,
       "ret_3m": 85.94,
       "ret_6m": 121.14,
-      "ret_1y": 211.17,
+      "ret_1y": 231.66,
       "ytd_chg": 103.33,
       "rsi": 83.3,
       "from_ath": 0.0,
@@ -1164,7 +1164,7 @@
     {
       "rank": 49,
       "ticker": "HPE",
-      "name": "HPE",
+      "name": "Hewlett Packard Enterprise Comp",
       "market": "US",
       "currency": "USD",
       "price": 37.58,
@@ -1196,7 +1196,7 @@
       "ret_1m": 8.32,
       "ret_3m": 69.08,
       "ret_6m": 161.01,
-      "ret_1y": 334.64,
+      "ret_1y": 335.01,
       "ytd_chg": 129.29,
       "rsi": 63.6,
       "from_ath": -4.33,
@@ -1212,11 +1212,11 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 159.15,
+    "usdjpy": 158.92,
     "stocks": [
       {
         "ticker": "SNDK",
-        "name": "SNDK",
+        "name": "Sandisk Corporation",
         "market": "US",
         "currency": "USD",
         "price": 1478.69,
@@ -1225,14 +1225,14 @@
         "rsi": 61.2,
         "score": 190.14,
         "shares": 8,
-        "alloc_man": 182,
+        "alloc_man": 181,
         "entry_price": 1425.96,
         "stop_price": 1326.14,
         "target_price": 1531.09
       },
       {
         "ticker": "INTC",
-        "name": "INTC",
+        "name": "Intel Corporation",
         "market": "US",
         "currency": "USD",
         "price": 119.84,
@@ -1248,7 +1248,7 @@
       },
       {
         "ticker": "MU",
-        "name": "MU",
+        "name": "Micron Technology, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 751.0,
@@ -1257,14 +1257,14 @@
         "rsi": 66.2,
         "score": 99.05,
         "shares": 16,
-        "alloc_man": 185,
+        "alloc_man": 184,
         "entry_price": 725.07,
         "stop_price": 674.32,
         "target_price": 787.56
       },
       {
         "ticker": "STX",
-        "name": "STX",
+        "name": "Seagate Technology Holdings PLC",
         "market": "US",
         "currency": "USD",
         "price": 812.73,
@@ -1273,14 +1273,14 @@
         "rsi": 61.2,
         "score": 95.01,
         "shares": 15,
-        "alloc_man": 184,
+        "alloc_man": 183,
         "entry_price": 769.69,
         "stop_price": 715.81,
         "target_price": 918.36
       },
       {
         "ticker": "DELL",
-        "name": "DELL",
+        "name": "Dell Technologies Inc.",
         "market": "US",
         "currency": "USD",
         "price": 295.19,
@@ -1296,7 +1296,7 @@
       },
       {
         "ticker": "MRVL",
-        "name": "MRVL",
+        "name": "Marvell Technology, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 196.33,
@@ -1312,7 +1312,7 @@
       },
       {
         "ticker": "WDC",
-        "name": "WDC",
+        "name": "Western Digital Corporation",
         "market": "US",
         "currency": "USD",
         "price": 484.28,
@@ -1321,14 +1321,14 @@
         "rsi": 59.7,
         "score": 80.83,
         "shares": 25,
-        "alloc_man": 187,
+        "alloc_man": 186,
         "entry_price": 468.97,
         "stop_price": 436.14,
         "target_price": 505.51
       },
       {
         "ticker": "ARM",
-        "name": "ARM",
+        "name": "Arm Holdings plc",
         "market": "US",
         "currency": "USD",
         "price": 306.51,
@@ -1344,7 +1344,7 @@
       },
       {
         "ticker": "LITE",
-        "name": "LITE",
+        "name": "Lumentum Holdings Inc.",
         "market": "US",
         "currency": "USD",
         "price": 946.9,
@@ -1360,7 +1360,7 @@
       },
       {
         "ticker": "AMD",
-        "name": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 467.51,
@@ -1471,8 +1471,8 @@
         "target_price": 25116.0
       }
     ],
-    "total_alloc_man": 2372,
-    "remaining_man": 628,
+    "total_alloc_man": 2369,
+    "remaining_man": 631,
     "max_loss_man": 166
   }
 }
