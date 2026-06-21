@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-06-20 00:10:53",
+  "updated_at": "2026-06-21 00:06:15",
   "total_scanned": 2078,
   "stats": {
     "us_count": 514,
     "jp_count": 1564,
-    "avg_score_us": 7.32,
+    "avg_score_us": 7.21,
     "avg_score_jp": 5.2
   },
-  "usdjpy": 161.28,
+  "usdjpy": 161.27,
   "ranking": [
     {
       "rank": 1,
@@ -36,7 +36,7 @@
     {
       "rank": 2,
       "ticker": "SNDK",
-      "name": "Sandisk Corporation",
+      "name": "SNDK",
       "market": "US",
       "currency": "USD",
       "price": 2184.75,
@@ -132,7 +132,7 @@
     {
       "rank": 6,
       "ticker": "MRVL",
-      "name": "Marvell Technology, Inc.",
+      "name": "MRVL",
       "market": "US",
       "currency": "USD",
       "price": 310.58,
@@ -156,7 +156,7 @@
     {
       "rank": 7,
       "ticker": "ARM",
-      "name": "Arm Holdings plc",
+      "name": "ARM",
       "market": "US",
       "currency": "USD",
       "price": 439.46,
@@ -180,7 +180,7 @@
     {
       "rank": 8,
       "ticker": "MU",
-      "name": "Micron Technology, Inc.",
+      "name": "MU",
       "market": "US",
       "currency": "USD",
       "price": 1133.99,
@@ -204,7 +204,7 @@
     {
       "rank": 9,
       "ticker": "WDC",
-      "name": "Western Digital Corporation",
+      "name": "WDC",
       "market": "US",
       "currency": "USD",
       "price": 746.23,
@@ -276,7 +276,7 @@
     {
       "rank": 12,
       "ticker": "STX",
-      "name": "Seagate Technology Holdings PLC",
+      "name": "STX",
       "market": "US",
       "currency": "USD",
       "price": 1070.23,
@@ -324,7 +324,7 @@
     {
       "rank": 14,
       "ticker": "INTC",
-      "name": "Intel Corporation",
+      "name": "INTC",
       "market": "US",
       "currency": "USD",
       "price": 133.99,
@@ -372,7 +372,7 @@
     {
       "rank": 16,
       "ticker": "DELL",
-      "name": "Dell Technologies Inc.",
+      "name": "DELL",
       "market": "US",
       "currency": "USD",
       "price": 409.5,
@@ -492,7 +492,7 @@
     {
       "rank": 21,
       "ticker": "AMD",
-      "name": "Advanced Micro Devices, Inc.",
+      "name": "AMD",
       "market": "US",
       "currency": "USD",
       "price": 537.37,
@@ -636,7 +636,7 @@
     {
       "rank": 27,
       "ticker": "FLEX",
-      "name": "Flex Ltd.",
+      "name": "FLEX",
       "market": "US",
       "currency": "USD",
       "price": 147.61,
@@ -660,7 +660,7 @@
     {
       "rank": 28,
       "ticker": "HPE",
-      "name": "Hewlett Packard Enterprise Comp",
+      "name": "HPE",
       "market": "US",
       "currency": "USD",
       "price": 47.41,
@@ -732,7 +732,7 @@
     {
       "rank": 31,
       "ticker": "AMAT",
-      "name": "Applied Materials, Inc.",
+      "name": "AMAT",
       "market": "US",
       "currency": "USD",
       "price": 617.11,
@@ -828,7 +828,7 @@
     {
       "rank": 35,
       "ticker": "LRCX",
-      "name": "Lam Research Corporation",
+      "name": "LRCX",
       "market": "US",
       "currency": "USD",
       "price": 389.04,
@@ -876,7 +876,7 @@
     {
       "rank": 37,
       "ticker": "KLAC",
-      "name": "KLA Corporation",
+      "name": "KLAC",
       "market": "US",
       "currency": "USD",
       "price": 259.56,
@@ -1020,7 +1020,7 @@
     {
       "rank": 43,
       "ticker": "ON",
-      "name": "ON Semiconductor Corporation",
+      "name": "ON",
       "market": "US",
       "currency": "USD",
       "price": 121.62,
@@ -1212,11 +1212,11 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 161.28,
+    "usdjpy": 161.27,
     "stocks": [
       {
         "ticker": "SNDK",
-        "name": "Sandisk Corporation",
+        "name": "SNDK",
         "market": "US",
         "currency": "USD",
         "price": 2184.75,
@@ -1232,7 +1232,7 @@
       },
       {
         "ticker": "MRVL",
-        "name": "Marvell Technology, Inc.",
+        "name": "MRVL",
         "market": "US",
         "currency": "USD",
         "price": 310.58,
@@ -1248,7 +1248,7 @@
       },
       {
         "ticker": "ARM",
-        "name": "Arm Holdings plc",
+        "name": "ARM",
         "market": "US",
         "currency": "USD",
         "price": 439.46,
@@ -1264,7 +1264,7 @@
       },
       {
         "ticker": "MU",
-        "name": "Micron Technology, Inc.",
+        "name": "MU",
         "market": "US",
         "currency": "USD",
         "price": 1133.99,
@@ -1280,7 +1280,7 @@
       },
       {
         "ticker": "WDC",
-        "name": "Western Digital Corporation",
+        "name": "WDC",
         "market": "US",
         "currency": "USD",
         "price": 746.23,
@@ -1296,7 +1296,7 @@
       },
       {
         "ticker": "STX",
-        "name": "Seagate Technology Holdings PLC",
+        "name": "STX",
         "market": "US",
         "currency": "USD",
         "price": 1070.23,
@@ -1312,7 +1312,7 @@
       },
       {
         "ticker": "INTC",
-        "name": "Intel Corporation",
+        "name": "INTC",
         "market": "US",
         "currency": "USD",
         "price": 133.99,
@@ -1328,7 +1328,7 @@
       },
       {
         "ticker": "DELL",
-        "name": "Dell Technologies Inc.",
+        "name": "DELL",
         "market": "US",
         "currency": "USD",
         "price": 409.5,
@@ -1344,7 +1344,7 @@
       },
       {
         "ticker": "AMD",
-        "name": "Advanced Micro Devices, Inc.",
+        "name": "AMD",
         "market": "US",
         "currency": "USD",
         "price": 537.37,
@@ -1360,7 +1360,7 @@
       },
       {
         "ticker": "FLEX",
-        "name": "Flex Ltd.",
+        "name": "FLEX",
         "market": "US",
         "currency": "USD",
         "price": 147.61,
