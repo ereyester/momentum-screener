@@ -10,6 +10,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-screener
+  cancel-in-progress: false
+
 jobs:
   update-data:
     runs-on: ubuntu-latest
@@ -39,4 +43,5 @@ jobs:
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/data/latest.json
           git commit -m "🚀 Auto-update momentum data $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git pull --rebase origin main
           git push
