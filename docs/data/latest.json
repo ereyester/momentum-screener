@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-07-04 00:04:49",
+  "updated_at": "2026-07-04 12:34:47",
   "total_scanned": 2075,
   "stats": {
     "us_count": 516,
     "jp_count": 1559,
-    "avg_score_us": 8.07,
+    "avg_score_us": 8.06,
     "avg_score_jp": 6.88
   },
   "usdjpy": 161.34,
@@ -60,7 +60,7 @@
     {
       "rank": 3,
       "ticker": "SNDK",
-      "name": "SNDK",
+      "name": "Sandisk Corporation",
       "market": "US",
       "currency": "USD",
       "price": 1745.0,
@@ -228,7 +228,7 @@
     {
       "rank": 10,
       "ticker": "ALAB",
-      "name": "ALAB",
+      "name": "Astera Labs, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 406.42,
@@ -252,7 +252,7 @@
     {
       "rank": 11,
       "ticker": "MU",
-      "name": "MU",
+      "name": "Micron Technology, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 975.56,
@@ -276,7 +276,7 @@
     {
       "rank": 12,
       "ticker": "INTC",
-      "name": "INTC",
+      "name": "Intel Corporation",
       "market": "US",
       "currency": "USD",
       "price": 120.35,
@@ -492,7 +492,7 @@
     {
       "rank": 21,
       "ticker": "DELL",
-      "name": "DELL",
+      "name": "Dell Technologies Inc.",
       "market": "US",
       "currency": "USD",
       "price": 394.32,
@@ -516,7 +516,7 @@
     {
       "rank": 22,
       "ticker": "MRNA",
-      "name": "MRNA",
+      "name": "Moderna, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 79.76,
@@ -636,7 +636,7 @@
     {
       "rank": 27,
       "ticker": "MRVL",
-      "name": "MRVL",
+      "name": "Marvell Technology, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 245.29,
@@ -660,7 +660,7 @@
     {
       "rank": 28,
       "ticker": "AMD",
-      "name": "AMD",
+      "name": "Advanced Micro Devices, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 517.82,
@@ -708,7 +708,7 @@
     {
       "rank": 30,
       "ticker": "WDC",
-      "name": "WDC",
+      "name": "Western Digital Corporation",
       "market": "US",
       "currency": "USD",
       "price": 539.0,
@@ -732,7 +732,7 @@
     {
       "rank": 31,
       "ticker": "STX",
-      "name": "STX",
+      "name": "Seagate Technology Holdings PLC",
       "market": "US",
       "currency": "USD",
       "price": 820.16,
@@ -756,7 +756,7 @@
     {
       "rank": 32,
       "ticker": "ARM",
-      "name": "ARM",
+      "name": "Arm Holdings plc",
       "market": "US",
       "currency": "USD",
       "price": 315.28,
@@ -780,7 +780,7 @@
     {
       "rank": 33,
       "ticker": "PANW",
-      "name": "PANW",
+      "name": "Palo Alto Networks, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 348.06,
@@ -1020,7 +1020,7 @@
     {
       "rank": 43,
       "ticker": "AMAT",
-      "name": "AMAT",
+      "name": "Applied Materials, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 603.04,
@@ -1044,7 +1044,7 @@
     {
       "rank": 44,
       "ticker": "HUM",
-      "name": "HUM",
+      "name": "Humana Inc.",
       "market": "US",
       "currency": "USD",
       "price": 396.75,
@@ -1116,7 +1116,7 @@
     {
       "rank": 47,
       "ticker": "NBIS",
-      "name": "NBIS",
+      "name": "Nebius Group N.V.",
       "market": "US",
       "currency": "USD",
       "price": 215.62,
@@ -1140,7 +1140,7 @@
     {
       "rank": 48,
       "ticker": "DDOG",
-      "name": "DDOG",
+      "name": "Datadog, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 260.36,
@@ -1216,7 +1216,7 @@
     "stocks": [
       {
         "ticker": "SNDK",
-        "name": "SNDK",
+        "name": "Sandisk Corporation",
         "market": "US",
         "currency": "USD",
         "price": 1745.0,
@@ -1232,7 +1232,7 @@
       },
       {
         "ticker": "ALAB",
-        "name": "ALAB",
+        "name": "Astera Labs, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 406.42,
@@ -1248,7 +1248,7 @@
       },
       {
         "ticker": "MU",
-        "name": "MU",
+        "name": "Micron Technology, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 975.56,
@@ -1264,7 +1264,7 @@
       },
       {
         "ticker": "INTC",
-        "name": "INTC",
+        "name": "Intel Corporation",
         "market": "US",
         "currency": "USD",
         "price": 120.35,
@@ -1280,7 +1280,7 @@
       },
       {
         "ticker": "DELL",
-        "name": "DELL",
+        "name": "Dell Technologies Inc.",
         "market": "US",
         "currency": "USD",
         "price": 394.32,
@@ -1296,7 +1296,7 @@
       },
       {
         "ticker": "MRNA",
-        "name": "MRNA",
+        "name": "Moderna, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 79.76,
@@ -1312,7 +1312,7 @@
       },
       {
         "ticker": "MRVL",
-        "name": "MRVL",
+        "name": "Marvell Technology, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 245.29,
@@ -1328,7 +1328,7 @@
       },
       {
         "ticker": "AMD",
-        "name": "AMD",
+        "name": "Advanced Micro Devices, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 517.82,
@@ -1344,7 +1344,7 @@
       },
       {
         "ticker": "WDC",
-        "name": "WDC",
+        "name": "Western Digital Corporation",
         "market": "US",
         "currency": "USD",
         "price": 539.0,
@@ -1360,7 +1360,7 @@
       },
       {
         "ticker": "STX",
-        "name": "STX",
+        "name": "Seagate Technology Holdings PLC",
         "market": "US",
         "currency": "USD",
         "price": 820.16,
