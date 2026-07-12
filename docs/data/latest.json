@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-11 23:56:06",
+  "updated_at": "2026-07-12 23:53:49",
   "total_scanned": 2061,
   "stats": {
     "us_count": 502,
@@ -7,7 +7,7 @@
     "avg_score_us": 6.51,
     "avg_score_jp": 5.16
   },
-  "usdjpy": 161.67,
+  "usdjpy": 161.95,
   "ranking": [
     {
       "rank": 1,
@@ -36,7 +36,7 @@
     {
       "rank": 2,
       "ticker": "SNDK",
-      "name": "Sandisk Corporation",
+      "name": "SNDK",
       "market": "US",
       "currency": "USD",
       "price": 1915.92,
@@ -132,7 +132,7 @@
     {
       "rank": 6,
       "ticker": "DELL",
-      "name": "Dell Technologies Inc.",
+      "name": "DELL",
       "market": "US",
       "currency": "USD",
       "price": 434.97,
@@ -180,7 +180,7 @@
     {
       "rank": 8,
       "ticker": "MU",
-      "name": "Micron Technology, Inc.",
+      "name": "MU",
       "market": "US",
       "currency": "USD",
       "price": 979.3,
@@ -228,7 +228,7 @@
     {
       "rank": 10,
       "ticker": "AMD",
-      "name": "Advanced Micro Devices, Inc.",
+      "name": "AMD",
       "market": "US",
       "currency": "USD",
       "price": 557.89,
@@ -324,7 +324,7 @@
     {
       "rank": 14,
       "ticker": "STX",
-      "name": "Seagate Technology Holdings PLC",
+      "name": "STX",
       "market": "US",
       "currency": "USD",
       "price": 910.34,
@@ -372,7 +372,7 @@
     {
       "rank": 16,
       "ticker": "WDC",
-      "name": "Western Digital Corporation",
+      "name": "WDC",
       "market": "US",
       "currency": "USD",
       "price": 582.59,
@@ -396,7 +396,7 @@
     {
       "rank": 17,
       "ticker": "DDOG",
-      "name": "Datadog, Inc.",
+      "name": "DDOG",
       "market": "US",
       "currency": "USD",
       "price": 257.54,
@@ -492,7 +492,7 @@
     {
       "rank": 21,
       "ticker": "MRVL",
-      "name": "Marvell Technology, Inc.",
+      "name": "MRVL",
       "market": "US",
       "currency": "USD",
       "price": 235.81,
@@ -564,7 +564,7 @@
     {
       "rank": 24,
       "ticker": "FTNT",
-      "name": "Fortinet, Inc.",
+      "name": "FTNT",
       "market": "US",
       "currency": "USD",
       "price": 157.51,
@@ -588,7 +588,7 @@
     {
       "rank": 25,
       "ticker": "INTC",
-      "name": "Intel Corporation",
+      "name": "INTC",
       "market": "US",
       "currency": "USD",
       "price": 109.84,
@@ -612,7 +612,7 @@
     {
       "rank": 26,
       "ticker": "PANW",
-      "name": "Palo Alto Networks, Inc.",
+      "name": "PANW",
       "market": "US",
       "currency": "USD",
       "price": 325.91,
@@ -636,7 +636,7 @@
     {
       "rank": 27,
       "ticker": "HPE",
-      "name": "Hewlett Packard Enterprise Comp",
+      "name": "HPE",
       "market": "US",
       "currency": "USD",
       "price": 48.54,
@@ -804,7 +804,7 @@
     {
       "rank": 34,
       "ticker": "MRNA",
-      "name": "Moderna, Inc.",
+      "name": "MRNA",
       "market": "US",
       "currency": "USD",
       "price": 68.27,
@@ -852,7 +852,7 @@
     {
       "rank": 36,
       "ticker": "CRWD",
-      "name": "CrowdStrike Holdings, Inc.",
+      "name": "CRWD",
       "market": "US",
       "currency": "USD",
       "price": 187.18,
@@ -876,7 +876,7 @@
     {
       "rank": 37,
       "ticker": "FLEX",
-      "name": "Flex Ltd.",
+      "name": "FLEX",
       "market": "US",
       "currency": "USD",
       "price": 135.8,
@@ -1044,7 +1044,7 @@
     {
       "rank": 44,
       "ticker": "DVA",
-      "name": "DaVita Inc.",
+      "name": "DVA",
       "market": "US",
       "currency": "USD",
       "price": 232.8,
@@ -1140,7 +1140,7 @@
     {
       "rank": 48,
       "ticker": "HUM",
-      "name": "Humana Inc.",
+      "name": "HUM",
       "market": "US",
       "currency": "USD",
       "price": 392.22,
@@ -1212,11 +1212,11 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 161.67,
+    "usdjpy": 161.95,
     "stocks": [
       {
         "ticker": "SNDK",
-        "name": "Sandisk Corporation",
+        "name": "SNDK",
         "market": "US",
         "currency": "USD",
         "price": 1915.92,
@@ -1232,7 +1232,7 @@
       },
       {
         "ticker": "DELL",
-        "name": "Dell Technologies Inc.",
+        "name": "DELL",
         "market": "US",
         "currency": "USD",
         "price": 434.97,
@@ -1240,15 +1240,15 @@
         "ret_3m": 145.4,
         "rsi": 56.4,
         "score": 104.63,
-        "shares": 27,
-        "alloc_man": 187,
+        "shares": 26,
+        "alloc_man": 181,
         "entry_price": 429.25,
         "stop_price": 399.2,
         "target_price": 456.64
       },
       {
         "ticker": "MU",
-        "name": "Micron Technology, Inc.",
+        "name": "MU",
         "market": "US",
         "currency": "USD",
         "price": 979.3,
@@ -1257,14 +1257,14 @@
         "rsi": 40.4,
         "score": 83.72,
         "shares": 11,
-        "alloc_man": 172,
+        "alloc_man": 173,
         "entry_price": 968.57,
         "stop_price": 900.77,
         "target_price": 1113.86
       },
       {
         "ticker": "AMD",
-        "name": "Advanced Micro Devices, Inc.",
+        "name": "AMD",
         "market": "US",
         "currency": "USD",
         "price": 557.89,
@@ -1280,7 +1280,7 @@
       },
       {
         "ticker": "STX",
-        "name": "Seagate Technology Holdings PLC",
+        "name": "STX",
         "market": "US",
         "currency": "USD",
         "price": 910.34,
@@ -1296,7 +1296,7 @@
       },
       {
         "ticker": "WDC",
-        "name": "Western Digital Corporation",
+        "name": "WDC",
         "market": "US",
         "currency": "USD",
         "price": 582.59,
@@ -1305,14 +1305,14 @@
         "rsi": 34.7,
         "score": 70.58,
         "shares": 20,
-        "alloc_man": 182,
+        "alloc_man": 183,
         "entry_price": 564.1,
         "stop_price": 524.61,
         "target_price": 648.72
       },
       {
         "ticker": "DDOG",
-        "name": "Datadog, Inc.",
+        "name": "DDOG",
         "market": "US",
         "currency": "USD",
         "price": 257.54,
@@ -1320,15 +1320,15 @@
         "ret_3m": 144.41,
         "rsi": 70.6,
         "score": 68.0,
-        "shares": 45,
-        "alloc_man": 187,
+        "shares": 44,
+        "alloc_man": 183,
         "entry_price": 257.33,
         "stop_price": 239.32,
         "target_price": 271.94
       },
       {
         "ticker": "MRVL",
-        "name": "Marvell Technology, Inc.",
+        "name": "MRVL",
         "market": "US",
         "currency": "USD",
         "price": 235.81,
@@ -1344,7 +1344,7 @@
       },
       {
         "ticker": "FTNT",
-        "name": "Fortinet, Inc.",
+        "name": "FTNT",
         "market": "US",
         "currency": "USD",
         "price": 157.51,
@@ -1360,7 +1360,7 @@
       },
       {
         "ticker": "INTC",
-        "name": "Intel Corporation",
+        "name": "INTC",
         "market": "US",
         "currency": "USD",
         "price": 109.84,
@@ -1368,8 +1368,8 @@
         "ret_3m": 76.08,
         "rsi": 33.1,
         "score": 57.31,
-        "shares": 111,
-        "alloc_man": 187,
+        "shares": 110,
+        "alloc_man": 186,
         "entry_price": 104.35,
         "stop_price": 97.04,
         "target_price": 120.0
@@ -1471,8 +1471,8 @@
         "target_price": 3815.7
       }
     ],
-    "total_alloc_man": 2557,
-    "remaining_man": 443,
-    "max_loss_man": 179
+    "total_alloc_man": 2547,
+    "remaining_man": 453,
+    "max_loss_man": 178
   }
 }
