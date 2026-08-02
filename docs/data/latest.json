@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-01 23:57:31",
+  "updated_at": "2026-08-02 23:59:14",
   "total_scanned": 2061,
   "stats": {
     "us_count": 503,
@@ -7,12 +7,12 @@
     "avg_score_us": 3.65,
     "avg_score_jp": 4.53
   },
-  "usdjpy": 157.4,
+  "usdjpy": 157.59,
   "ranking": [
     {
       "rank": 1,
       "ticker": "DELL",
-      "name": "DELL",
+      "name": "Dell Technologies Inc.",
       "market": "US",
       "currency": "USD",
       "price": 405.37,
@@ -180,7 +180,7 @@
     {
       "rank": 8,
       "ticker": "HPE",
-      "name": "HPE",
+      "name": "Hewlett Packard Enterprise Comp",
       "market": "US",
       "currency": "USD",
       "price": 47.9,
@@ -204,7 +204,7 @@
     {
       "rank": 9,
       "ticker": "DDOG",
-      "name": "DDOG",
+      "name": "Datadog, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 267.97,
@@ -228,7 +228,7 @@
     {
       "rank": 10,
       "ticker": "FTNT",
-      "name": "FTNT",
+      "name": "Fortinet, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 161.95,
@@ -251,30 +251,6 @@
     },
     {
       "rank": 11,
-      "ticker": "9278.T",
-      "name": "ブックオフグループホールディングス",
-      "market": "JP",
-      "currency": "JPY",
-      "price": 2816.0,
-      "day_chg": -1.12,
-      "ret_1m": 44.93,
-      "ret_3m": 41.08,
-      "ret_6m": 78.76,
-      "ret_1y": 98.5,
-      "ytd_chg": 94.18,
-      "rsi": 84.0,
-      "from_ath": -1.47,
-      "vol_ratio": 0.63,
-      "volatility": 0.034,
-      "score": 46.05,
-      "ma5": 2795.4,
-      "ma20": 2420.85,
-      "ma50": 2136.16,
-      "high_52w": 2858.0,
-      "low_52w": 1294.52
-    },
-    {
-      "rank": 12,
       "ticker": "4722.T",
       "name": "フューチャー",
       "market": "JP",
@@ -298,9 +274,33 @@
       "low_52w": 1411.06
     },
     {
+      "rank": 12,
+      "ticker": "9278.T",
+      "name": "ブックオフグループホールディングス",
+      "market": "JP",
+      "currency": "JPY",
+      "price": 2816.0,
+      "day_chg": -1.12,
+      "ret_1m": 44.93,
+      "ret_3m": 41.08,
+      "ret_6m": 78.76,
+      "ret_1y": 98.5,
+      "ytd_chg": 94.18,
+      "rsi": 84.0,
+      "from_ath": -1.47,
+      "vol_ratio": 0.63,
+      "volatility": 0.034,
+      "score": 46.05,
+      "ma5": 2795.4,
+      "ma20": 2420.85,
+      "ma50": 2136.16,
+      "high_52w": 2858.0,
+      "low_52w": 1294.52
+    },
+    {
       "rank": 13,
       "ticker": "DVA",
-      "name": "DVA",
+      "name": "DaVita Inc.",
       "market": "US",
       "currency": "USD",
       "price": 240.09,
@@ -324,7 +324,7 @@
     {
       "rank": 14,
       "ticker": "NTAP",
-      "name": "NTAP",
+      "name": "NetApp, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 178.5,
@@ -372,7 +372,7 @@
     {
       "rank": 16,
       "ticker": "PANW",
-      "name": "PANW",
+      "name": "Palo Alto Networks, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 331.83,
@@ -516,7 +516,7 @@
     {
       "rank": 22,
       "ticker": "CRWD",
-      "name": "CRWD",
+      "name": "CrowdStrike Holdings, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 190.86,
@@ -636,7 +636,7 @@
     {
       "rank": 27,
       "ticker": "MPC",
-      "name": "MPC",
+      "name": "Marathon Petroleum Corporation",
       "market": "US",
       "currency": "USD",
       "price": 316.47,
@@ -899,30 +899,6 @@
     },
     {
       "rank": 38,
-      "ticker": "STX",
-      "name": "Seagate Technology Holdings PLC",
-      "market": "US",
-      "currency": "USD",
-      "price": 856.13,
-      "day_chg": 0.52,
-      "ret_1m": 4.39,
-      "ret_3m": 17.86,
-      "ret_6m": 110.51,
-      "ret_1y": 457.59,
-      "ytd_chg": 198.47,
-      "rsi": 49.6,
-      "from_ath": -21.69,
-      "vol_ratio": 1.12,
-      "volatility": 0.06,
-      "score": 29.21,
-      "ma5": 807.31,
-      "ma20": 843.04,
-      "ma50": 890.07,
-      "high_52w": 1093.26,
-      "low_52w": 146.06
-    },
-    {
-      "rank": 39,
       "ticker": "7740.T",
       "name": "タムロン",
       "market": "JP",
@@ -944,6 +920,30 @@
       "ma50": 1116.09,
       "high_52w": 1438.0,
       "low_52w": 877.36
+    },
+    {
+      "rank": 39,
+      "ticker": "STX",
+      "name": "Seagate Technology Holdings PLC",
+      "market": "US",
+      "currency": "USD",
+      "price": 856.13,
+      "day_chg": 0.52,
+      "ret_1m": 4.39,
+      "ret_3m": 17.86,
+      "ret_6m": 110.51,
+      "ret_1y": 457.59,
+      "ytd_chg": 198.47,
+      "rsi": 49.6,
+      "from_ath": -21.69,
+      "vol_ratio": 1.12,
+      "volatility": 0.06,
+      "score": 29.21,
+      "ma5": 807.31,
+      "ma20": 843.04,
+      "ma50": 890.07,
+      "high_52w": 1093.26,
+      "low_52w": 146.06
     },
     {
       "rank": 40,
@@ -1212,11 +1212,11 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 157.4,
+    "usdjpy": 157.59,
     "stocks": [
       {
         "ticker": "DELL",
-        "name": "DELL",
+        "name": "Dell Technologies Inc.",
         "market": "US",
         "currency": "USD",
         "price": 405.37,
@@ -1225,14 +1225,14 @@
         "rsi": 46.3,
         "score": 80.33,
         "shares": 29,
-        "alloc_man": 182,
+        "alloc_man": 183,
         "entry_price": 399.77,
         "stop_price": 371.79,
         "target_price": 455.89
       },
       {
         "ticker": "HPE",
-        "name": "HPE",
+        "name": "Hewlett Packard Enterprise Comp",
         "market": "US",
         "currency": "USD",
         "price": 47.9,
@@ -1248,7 +1248,7 @@
       },
       {
         "ticker": "DDOG",
-        "name": "DDOG",
+        "name": "Datadog, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 267.97,
@@ -1264,7 +1264,7 @@
       },
       {
         "ticker": "FTNT",
-        "name": "FTNT",
+        "name": "Fortinet, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 161.95,
@@ -1280,7 +1280,7 @@
       },
       {
         "ticker": "DVA",
-        "name": "DVA",
+        "name": "DaVita Inc.",
         "market": "US",
         "currency": "USD",
         "price": 240.09,
@@ -1289,14 +1289,14 @@
         "rsi": 56.9,
         "score": 42.29,
         "shares": 49,
-        "alloc_man": 184,
+        "alloc_man": 185,
         "entry_price": 239.14,
         "stop_price": 222.4,
         "target_price": 275.01
       },
       {
         "ticker": "NTAP",
-        "name": "NTAP",
+        "name": "NetApp, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 178.5,
@@ -1312,7 +1312,7 @@
       },
       {
         "ticker": "PANW",
-        "name": "PANW",
+        "name": "Palo Alto Networks, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 331.83,
@@ -1320,15 +1320,15 @@
         "ret_3m": 83.25,
         "rsi": 50.8,
         "score": 40.61,
-        "shares": 37,
-        "alloc_man": 187,
+        "shares": 36,
+        "alloc_man": 182,
         "entry_price": 321.6,
         "stop_price": 299.09,
         "target_price": 351.51
       },
       {
         "ticker": "CRWD",
-        "name": "CRWD",
+        "name": "CrowdStrike Holdings, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 190.86,
@@ -1344,7 +1344,7 @@
       },
       {
         "ticker": "MPC",
-        "name": "MPC",
+        "name": "Marathon Petroleum Corporation",
         "market": "US",
         "currency": "USD",
         "price": 316.47,
@@ -1353,7 +1353,7 @@
         "rsi": 65.9,
         "score": 32.49,
         "shares": 38,
-        "alloc_man": 186,
+        "alloc_man": 187,
         "entry_price": 311.53,
         "stop_price": 289.72,
         "target_price": 358.26
@@ -1471,8 +1471,8 @@
         "target_price": 6419.43
       }
     ],
-    "total_alloc_man": 2870,
-    "remaining_man": 130,
+    "total_alloc_man": 2867,
+    "remaining_man": 133,
     "max_loss_man": 201
   }
 }
