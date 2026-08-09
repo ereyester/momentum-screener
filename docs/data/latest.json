@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-08 23:27:31",
+  "updated_at": "2026-08-09 23:31:25",
   "total_scanned": 2061,
   "stats": {
     "us_count": 503,
@@ -7,7 +7,7 @@
     "avg_score_us": 5.4,
     "avg_score_jp": 5.16
   },
-  "usdjpy": 157.74,
+  "usdjpy": 157.84,
   "ranking": [
     {
       "rank": 1,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 157.74,
+    "usdjpy": 157.84,
     "stocks": [
       {
         "ticker": "DELL",
@@ -1471,8 +1471,8 @@
         "target_price": 9799.72
       }
     ],
-    "total_alloc_man": 2698,
-    "remaining_man": 302,
+    "total_alloc_man": 2699,
+    "remaining_man": 301,
     "max_loss_man": 189
   }
 }
