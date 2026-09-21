@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-09-20 00:39:32",
+  "updated_at": "2026-09-21 00:50:56",
   "total_scanned": 718,
   "stats": {
     "us_count": 503,
     "jp_count": 215,
-    "avg_score_us": 1.68,
+    "avg_score_us": 1.92,
     "avg_score_jp": 2.34
   },
-  "usdjpy": 156.85,
+  "usdjpy": 156.73,
   "ranking": [
     {
       "rank": 1,
@@ -251,6 +251,30 @@
     },
     {
       "rank": 11,
+      "ticker": "ILMN",
+      "name": "Illumina, Inc.",
+      "market": "US",
+      "currency": "USD",
+      "price": 239.62,
+      "day_chg": -2.27,
+      "ret_1m": 12.37,
+      "ret_3m": 48.48,
+      "ret_6m": 92.73,
+      "ret_1y": 133.21,
+      "ytd_chg": 78.36,
+      "rsi": 62.9,
+      "from_ath": -2.27,
+      "vol_ratio": 9.01,
+      "volatility": 0.033,
+      "score": 38.04,
+      "ma5": 228.85,
+      "ma20": 218.88,
+      "ma50": 204.06,
+      "high_52w": 245.18,
+      "low_52w": 91.0
+    },
+    {
+      "rank": 12,
       "ticker": "PSX",
       "name": "Phillips 66",
       "market": "US",
@@ -274,7 +298,7 @@
       "low_52w": 123.11
     },
     {
-      "rank": 12,
+      "rank": 13,
       "ticker": "PANW",
       "name": "Palo Alto Networks, Inc.",
       "market": "US",
@@ -298,7 +322,7 @@
       "low_52w": 141.67
     },
     {
-      "rank": 13,
+      "rank": 14,
       "ticker": "RVTY",
       "name": "Revvity, Inc.",
       "market": "US",
@@ -322,7 +346,7 @@
       "low_52w": 82.21
     },
     {
-      "rank": 14,
+      "rank": 15,
       "ticker": "FTNT",
       "name": "Fortinet, Inc.",
       "market": "US",
@@ -346,7 +370,7 @@
       "low_52w": 75.23
     },
     {
-      "rank": 15,
+      "rank": 16,
       "ticker": "IQV",
       "name": "IQVIA Holdings, Inc.",
       "market": "US",
@@ -370,7 +394,7 @@
       "low_52w": 156.66
     },
     {
-      "rank": 16,
+      "rank": 17,
       "ticker": "VEEV",
       "name": "Veeva Systems Inc.",
       "market": "US",
@@ -394,7 +418,7 @@
       "low_52w": 151.43
     },
     {
-      "rank": 17,
+      "rank": 18,
       "ticker": "CRL",
       "name": "Charles River Laboratories Inte",
       "market": "US",
@@ -418,7 +442,7 @@
       "low_52w": 145.57
     },
     {
-      "rank": 18,
+      "rank": 19,
       "ticker": "SWKS",
       "name": "Skyworks Solutions, Inc.",
       "market": "US",
@@ -442,7 +466,7 @@
       "low_52w": 52.05
     },
     {
-      "rank": 19,
+      "rank": 20,
       "ticker": "INTC",
       "name": "Intel Corporation",
       "market": "US",
@@ -466,7 +490,7 @@
       "low_52w": 28.76
     },
     {
-      "rank": 20,
+      "rank": 21,
       "ticker": "WDAY",
       "name": "Workday, Inc.",
       "market": "US",
@@ -490,7 +514,7 @@
       "low_52w": 112.5
     },
     {
-      "rank": 21,
+      "rank": 22,
       "ticker": "SNDK",
       "name": "Sandisk Corporation",
       "market": "US",
@@ -514,7 +538,7 @@
       "low_52w": 94.29
     },
     {
-      "rank": 22,
+      "rank": 23,
       "ticker": "HUM",
       "name": "Humana Inc.",
       "market": "US",
@@ -538,7 +562,7 @@
       "low_52w": 162.46
     },
     {
-      "rank": 23,
+      "rank": 24,
       "ticker": "CRM",
       "name": "Salesforce, Inc.",
       "market": "US",
@@ -562,7 +586,7 @@
       "low_52w": 149.86
     },
     {
-      "rank": 24,
+      "rank": 25,
       "ticker": "MRVL",
       "name": "Marvell Technology, Inc.",
       "market": "US",
@@ -586,7 +610,7 @@
       "low_52w": 73.67
     },
     {
-      "rank": 25,
+      "rank": 26,
       "ticker": "HOOD",
       "name": "Robinhood Markets, Inc.",
       "market": "US",
@@ -610,7 +634,7 @@
       "low_52w": 65.16
     },
     {
-      "rank": 26,
+      "rank": 27,
       "ticker": "NTAP",
       "name": "NetApp, Inc.",
       "market": "US",
@@ -634,7 +658,7 @@
       "low_52w": 93.35
     },
     {
-      "rank": 27,
+      "rank": 28,
       "ticker": "7272.T",
       "name": "YAMAHA MOTOR CO",
       "market": "JP",
@@ -658,7 +682,7 @@
       "low_52w": 1026.72
     },
     {
-      "rank": 28,
+      "rank": 29,
       "ticker": "MU",
       "name": "Micron Technology, Inc.",
       "market": "US",
@@ -682,7 +706,7 @@
       "low_52w": 156.58
     },
     {
-      "rank": 29,
+      "rank": 30,
       "ticker": "ZBRA",
       "name": "Zebra Technologies Corporation",
       "market": "US",
@@ -706,7 +730,7 @@
       "low_52w": 199.3
     },
     {
-      "rank": 30,
+      "rank": 31,
       "ticker": "SMCI",
       "name": "Super Micro Computer, Inc.",
       "market": "US",
@@ -730,7 +754,7 @@
       "low_52w": 20.53
     },
     {
-      "rank": 31,
+      "rank": 32,
       "ticker": "7832.T",
       "name": "BANDAI NAMCO HOLDINGS INC",
       "market": "JP",
@@ -754,7 +778,31 @@
       "low_52w": 3589.0
     },
     {
-      "rank": 32,
+      "rank": 33,
+      "ticker": "P",
+      "name": "Everpure, Inc.",
+      "market": "US",
+      "currency": "USD",
+      "price": 104.14,
+      "day_chg": 0.14,
+      "ret_1m": -5.31,
+      "ret_3m": 35.18,
+      "ret_6m": 66.28,
+      "ret_1y": 18.52,
+      "ytd_chg": 50.91,
+      "rsi": 64.4,
+      "from_ath": -11.87,
+      "vol_ratio": 10.96,
+      "volatility": 0.044,
+      "score": 21.68,
+      "ma5": 99.3,
+      "ma20": 98.86,
+      "ma50": 91.8,
+      "high_52w": 118.16,
+      "low_52w": 56.99
+    },
+    {
+      "rank": 34,
       "ticker": "2531.T",
       "name": "TAKARA HOLDINGS INC",
       "market": "JP",
@@ -778,7 +826,7 @@
       "low_52w": 1373.2
     },
     {
-      "rank": 33,
+      "rank": 35,
       "ticker": "BBY",
       "name": "Best Buy Co., Inc.",
       "market": "US",
@@ -802,7 +850,7 @@
       "low_52w": 54.22
     },
     {
-      "rank": 34,
+      "rank": 36,
       "ticker": "TMO",
       "name": "Thermo Fisher Scientific Inc",
       "market": "US",
@@ -826,7 +874,31 @@
       "low_52w": 437.57
     },
     {
-      "rank": 35,
+      "rank": 37,
+      "ticker": "BE",
+      "name": "Bloom Energy Corporation",
+      "market": "US",
+      "currency": "USD",
+      "price": 265.63,
+      "day_chg": -5.39,
+      "ret_1m": 31.19,
+      "ret_3m": -23.2,
+      "ret_6m": 76.95,
+      "ret_1y": 212.76,
+      "ytd_chg": 169.16,
+      "rsi": 66.2,
+      "from_ath": -23.2,
+      "vol_ratio": 4.47,
+      "volatility": 0.047,
+      "score": 20.91,
+      "ma5": 266.56,
+      "ma20": 240.45,
+      "ma50": 225.43,
+      "high_52w": 345.85,
+      "low_52w": 68.69
+    },
+    {
+      "rank": 38,
       "ticker": "9101.T",
       "name": "NIPPON YUSEN KABUSHIKI KAISHA",
       "market": "JP",
@@ -850,7 +922,7 @@
       "low_52w": 4715.2
     },
     {
-      "rank": 36,
+      "rank": 39,
       "ticker": "NOW",
       "name": "ServiceNow, Inc.",
       "market": "US",
@@ -874,7 +946,7 @@
       "low_52w": 83.0
     },
     {
-      "rank": 37,
+      "rank": 40,
       "ticker": "FFIV",
       "name": "F5, Inc.",
       "market": "US",
@@ -898,7 +970,7 @@
       "low_52w": 223.99
     },
     {
-      "rank": 38,
+      "rank": 41,
       "ticker": "CNC",
       "name": "Centene Corporation",
       "market": "US",
@@ -922,7 +994,7 @@
       "low_52w": 31.77
     },
     {
-      "rank": 39,
+      "rank": 42,
       "ticker": "PLTR",
       "name": "Palantir Technologies Inc.",
       "market": "US",
@@ -946,7 +1018,7 @@
       "low_52w": 107.27
     },
     {
-      "rank": 40,
+      "rank": 43,
       "ticker": "5019.T",
       "name": "IDEMITSU KOSAN CO.LTD",
       "market": "JP",
@@ -970,7 +1042,7 @@
       "low_52w": 989.4
     },
     {
-      "rank": 41,
+      "rank": 44,
       "ticker": "8304.T",
       "name": "AOZORA BANK",
       "market": "JP",
@@ -994,7 +1066,7 @@
       "low_52w": 2124.04
     },
     {
-      "rank": 42,
+      "rank": 45,
       "ticker": "4704.T",
       "name": "TREND MICRO INC",
       "market": "JP",
@@ -1018,7 +1090,7 @@
       "low_52w": 4906.0
     },
     {
-      "rank": 43,
+      "rank": 46,
       "ticker": "ANET",
       "name": "Arista Networks, Inc.",
       "market": "US",
@@ -1042,7 +1114,7 @@
       "low_52w": 116.13
     },
     {
-      "rank": 44,
+      "rank": 47,
       "ticker": "9984.T",
       "name": "SOFTBANK GROUP CORP",
       "market": "JP",
@@ -1066,7 +1138,7 @@
       "low_52w": 3502.11
     },
     {
-      "rank": 45,
+      "rank": 48,
       "ticker": "4689.T",
       "name": "LY CORPORATION",
       "market": "JP",
@@ -1090,7 +1162,7 @@
       "low_52w": 358.67
     },
     {
-      "rank": 46,
+      "rank": 49,
       "ticker": "9107.T",
       "name": "KAWASAKI KISEN KAISHA",
       "market": "JP",
@@ -1114,7 +1186,7 @@
       "low_52w": 1975.76
     },
     {
-      "rank": 47,
+      "rank": 50,
       "ticker": "3659.T",
       "name": "NEXON CO LTD",
       "market": "JP",
@@ -1136,83 +1208,11 @@
       "ma50": 2755.37,
       "high_52w": 4358.92,
       "low_52w": 2085.3
-    },
-    {
-      "rank": 48,
-      "ticker": "DDOG",
-      "name": "Datadog, Inc.",
-      "market": "US",
-      "currency": "USD",
-      "price": 229.92,
-      "day_chg": -2.58,
-      "ret_1m": -1.13,
-      "ret_3m": 3.86,
-      "ret_6m": 83.82,
-      "ret_1y": 65.62,
-      "ytd_chg": 71.88,
-      "rsi": 45.5,
-      "from_ath": -20.21,
-      "vol_ratio": 1.41,
-      "volatility": 0.036,
-      "score": 17.47,
-      "ma5": 231.41,
-      "ma20": 226.26,
-      "ma50": 243.63,
-      "high_52w": 288.15,
-      "low_52w": 102.61
-    },
-    {
-      "rank": 49,
-      "ticker": "MSFT",
-      "name": "Microsoft Corporation",
-      "market": "US",
-      "currency": "USD",
-      "price": 493.78,
-      "day_chg": -0.8,
-      "ret_1m": 2.62,
-      "ret_3m": 34.67,
-      "ret_6m": 29.83,
-      "ret_1y": -3.88,
-      "ytd_chg": 5.07,
-      "rsi": 38.9,
-      "from_ath": -8.16,
-      "vol_ratio": 1.88,
-      "volatility": 0.014,
-      "score": 17.42,
-      "ma5": 496.87,
-      "ma20": 497.51,
-      "ma50": 464.2,
-      "high_52w": 537.65,
-      "low_52w": 352.17
-    },
-    {
-      "rank": 50,
-      "ticker": "TECH",
-      "name": "Bio-Techne Corp",
-      "market": "US",
-      "currency": "USD",
-      "price": 72.37,
-      "day_chg": -0.06,
-      "ret_1m": 0.24,
-      "ret_3m": 30.28,
-      "ret_6m": 41.0,
-      "ret_1y": 36.93,
-      "ytd_chg": 21.85,
-      "rsi": 50.8,
-      "from_ath": -0.14,
-      "vol_ratio": 1.91,
-      "volatility": 0.001,
-      "score": 17.38,
-      "ma5": 72.34,
-      "ma20": 72.32,
-      "ma50": 72.05,
-      "high_52w": 72.47,
-      "low_52w": 43.17
     }
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 156.85,
+    "usdjpy": 156.73,
     "stocks": [
       {
         "ticker": "MRNA",
@@ -1343,6 +1343,22 @@
         "target_price": 39.01
       },
       {
+        "ticker": "ILMN",
+        "name": "Illumina, Inc.",
+        "market": "US",
+        "currency": "USD",
+        "price": 239.62,
+        "ret_1m": 12.37,
+        "ret_3m": 48.48,
+        "rsi": 62.9,
+        "score": 38.04,
+        "shares": 52,
+        "alloc_man": 187,
+        "entry_price": 228.85,
+        "stop_price": 212.83,
+        "target_price": 263.18
+      },
+      {
         "ticker": "PSX",
         "name": "Phillips 66",
         "market": "US",
@@ -1357,22 +1373,6 @@
         "entry_price": 266.79,
         "stop_price": 248.11,
         "target_price": 306.81
-      },
-      {
-        "ticker": "PANW",
-        "name": "Palo Alto Networks, Inc.",
-        "market": "US",
-        "currency": "USD",
-        "price": 363.58,
-        "ret_1m": 4.01,
-        "ret_3m": 26.95,
-        "rsi": 47.2,
-        "score": 34.31,
-        "shares": 33,
-        "alloc_man": 183,
-        "entry_price": 353.78,
-        "stop_price": 329.02,
-        "target_price": 388.08
       },
       {
         "ticker": "6098.T",
@@ -1471,8 +1471,8 @@
         "target_price": 8510.23
       }
     ],
-    "total_alloc_man": 2865,
-    "remaining_man": 135,
+    "total_alloc_man": 2868,
+    "remaining_man": 132,
     "max_loss_man": 201
   }
 }
