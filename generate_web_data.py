@@ -8,7 +8,7 @@ import sys
 import os
 import io
 import time
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 
 import requests
 import pandas as pd
@@ -265,7 +265,7 @@ def main():
     jp_df = df[df["market"] == "JP"]
 
     output = {
-        "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+        "updated_at": datetime.now(timezone(timedelta(hours=9))).strftime("%Y-%m-%d %H:%M:%S"),
         "total_scanned": len(df),
         "stats": {
             "us_count": len(us_df),
