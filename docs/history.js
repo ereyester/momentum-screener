@@ -79,7 +79,7 @@ async function getSnap(id) {
 
 function setTbodyMsg(html) {
     document.getElementById('move-tbody').innerHTML =
-        `<tr><td colspan="8"><div class="loading">${html}</div></td></tr>`;
+        `<tr><td colspan="9"><div class="loading">${html}</div></td></tr>`;
 }
 
 // ============================================================
@@ -193,7 +193,7 @@ function compare(b, a) {
     const rows = { up: [], down: [], new: [], out: [], all: [] };
     for (const x of inA) {
         const prev = b.byTicker[x.ticker];
-        const r = { ...x, prev: prev ? prev.rank : null, prevMax: b.list.length };
+        const r = { ...x, prev: prev ? prev.rank : null, prevMax: b.list.length, prevScore: prev ? prev.score : null };
         r.delta = prev ? prev.rank - x.rank : null;
         rows.all.push(r);
         if (!bTop.has(x.ticker)) rows.new.push(r);
@@ -204,7 +204,7 @@ function compare(b, a) {
         if (aTop.has(x.ticker)) continue;
         const now = a.byTicker[x.ticker];
         rows.out.push({
-            ...(now || x), rank: now ? now.rank : null, prev: x.rank,
+            ...(now || x), rank: now ? now.rank : null, prev: x.rank, prevScore: x.score,
             curMax: a.list.length, delta: now ? x.rank - now.rank : null, stale: !now,
         });
     }
@@ -263,8 +263,15 @@ function renderTable() {
             <td class="r c-price">${x.stale ? '<span class="c-flat">—</span>' : fmtPrice(x.price, x.currency)}</td>
             <td class="r ${x.stale ? 'c-flat' : pctCls(x.ret_1m)}">${x.stale ? '—' : fmtPct(x.ret_1m)}</td>
             <td class="r c-score" style="color:${x.stale ? 'var(--txt3)' : gradeColor(grade)}">${x.stale ? '—' : x.score.toFixed(1)}</td>
+            <td class="r">${scoreDiff(x)}</td>
         </tr>${open ? timelineRow(x.ticker) : ''}`;
     }).join('');
+}
+
+function scoreDiff(x) {
+    if (x.stale || x.prevScore == null) return '<span class="c-flat">—</span>';
+    const d = x.score - x.prevScore;
+    return `<span class="${pctCls(Math.round(d * 10))}">${d > 0 ? '+' : ''}${d.toFixed(1)}</span>`;
 }
 
 function deltaBadge(x) {
@@ -285,7 +292,7 @@ function toggleTimeline(tr) {
 }
 
 function timelineRow(ticker) {
-    return `<tr class="tl-row"><td colspan="8"><div class="tl-box" id="tl-box">${timelineSVG(ticker)}</div></td></tr>`;
+    return `<tr class="tl-row"><td colspan="9"><div class="tl-box" id="tl-box">${timelineSVG(ticker)}</div></td></tr>`;
 }
 
 function renderTimeline(ticker) {
@@ -294,50 +301,75 @@ function renderTimeline(ticker) {
 }
 
 function timelineSVG(ticker) {
-    if (!H.ranks) return '<div class="loading-txt">順位推移を読み込み中...</div>';
+    if (!H.ranks) return '<div class="loading-txt">スコア推移を読み込み中...</div>';
     const pts = H.ranks.ranks[ticker];
     if (!pts || !pts.length) return '<div class="loading-txt">TOP100に入った記録がありません</div>';
+    if (pts[0].length < 3) return '<div class="loading-txt">スコアの記録がありません</div>';
 
     const ids = H.ranks.ids;
     const n = ids.length;
-    const W = 900, Ht = 170, L = 40, R = 14, T = 12, B = 26;
-    const maxRank = 100;
+    const W = 900, Ht = 190, L = 40, R = 40, T = 12, B = 26;
+    const scores = pts.map(p => p[2]);
+    const hi = Math.max(...scores), lo = Math.min(...scores);
+    // 縦軸: 0〜最高値（グレード境界が見える範囲）に少し余白
+    const yMax = Math.ceil(Math.max(hi, 12) * 1.1 / 10) * 10;
+    const yMin = Math.min(0, Math.floor(lo / 10) * 10);
     const x = i => L + (n > 1 ? i / (n - 1) : 0.5) * (W - L - R);
-    // 平方根スケール: 上位の細かな動きを見やすくする
-    const y = r => T + (Math.sqrt(r) - 1) / (Math.sqrt(maxRank) - 1) * (Ht - T - B);
+    const y = v => T + (yMax - v) / (yMax - yMin) * (Ht - T - B);
 
-    // 連続する回だけ線でつなぐ（圏外の回で途切れる）
+    // 連続する回だけ線でつなぐ（TOP100圏外の回で途切れる）
     let path = '', prev = -2;
-    for (const [i, r] of pts) {
-        path += (i === prev + 1 ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(r).toFixed(1);
+    for (const [i, , v] of pts) {
+        path += (i === prev + 1 ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1);
         prev = i;
     }
-    const grid = [1, 10, 25, 50, 100].map(r =>
-        `<line x1="${L}" x2="${W - R}" y1="${y(r)}" y2="${y(r)}" class="tl-grid"/>
-         <text x="${L - 6}" y="${y(r) + 4}" class="tl-axis" text-anchor="end">${r}位</text>`).join('');
+    // グレード境界線
+    const bands = [['SSS', 60], ['SS', 40], ['S', 25], ['A', 12], ['B', 4]]
+        .filter(([, v]) => v <= yMax && v >= yMin)
+        .map(([g, v]) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="tl-grade" style="stroke:${gradeColor(g)}"/>
+            <text x="${W - R + 6}" y="${y(v) + 4}" class="tl-axis" style="fill:${gradeColor(g)}">${g}</text>`).join('');
+    const ticks = niceTicks(yMin, yMax).map(v =>
+        `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="tl-grid"/>
+         <text x="${L - 6}" y="${y(v) + 4}" class="tl-axis" text-anchor="end">${v}</text>`).join('');
     const selIdx = [H.from, H.to].map(id => ids.indexOf(id)).filter(i => i >= 0);
     const marks = selIdx.map(i => `<line x1="${x(i)}" x2="${x(i)}" y1="${T}" y2="${Ht - B}" class="tl-mark"/>`).join('');
-    const dots = pts.length <= 60
-        ? pts.map(([i, r]) => `<circle cx="${x(i)}" cy="${y(r)}" r="2.6" class="tl-dot"><title>${ids[i].replace('_', ' ')}: ${r}位</title></circle>`).join('')
-        : '';
+    const dots = pts.map(([i, r, v]) =>
+        `<circle cx="${x(i)}" cy="${y(v)}" r="${pts.length <= 60 ? 2.6 : 1.6}" class="tl-dot" style="fill:${gradeColor(getGrade(v))}"><title>${ids[i].replace('_', ' ')}: スコア ${v.toFixed(1)}（${r}位）</title></circle>`).join('');
+
     const last = pts[pts.length - 1];
-    const best = pts.reduce((m, p) => p[1] < m[1] ? p : m);
+    const best = pts.reduce((m, p) => p[2] > m[2] ? p : m);
     const [name] = H.ranks.names[ticker] || [ticker];
+    const lastGrade = getGrade(last[2]);
+
+    // 比較期間のスコア変化（両方の回に記録がある場合）
+    const at = id => { const i = ids.indexOf(id); const p = pts.find(q => q[0] === i); return p ? p[2] : null; };
+    const sf = at(H.from), st = at(H.to);
+    const period = sf != null && st != null
+        ? `<span class="tl-stat">比較期間 <b class="${pctCls(Math.round((st - sf) * 10))}">${st - sf > 0 ? '+' : ''}${(st - sf).toFixed(1)}</b>（${sf.toFixed(1)} → ${st.toFixed(1)}）</span>`
+        : '';
 
     return `<div class="tl-head">
             <span class="c-ticker">${esc(ticker)}</span>
             <span class="c-name">${esc(name)}</span>
-            <span class="tl-stat">最高 <b>${best[1]}位</b>（${ids[best[0]].slice(0, 10)}）</span>
-            <span class="tl-stat">TOP100入り <b>${pts.length}</b> / ${n}回</span>
-            <span class="tl-stat">直近の記録 <b>${last[1]}位</b>（${ids[last[0]].slice(0, 10)}）</span>
+            <span class="tl-stat">直近 <b style="color:${gradeColor(lastGrade)}">${last[2].toFixed(1)}</b> <span class="gr gr-${lastGrade.toLowerCase()}">${lastGrade}</span>（${ids[last[0]].slice(0, 10)}・${last[1]}位）</span>
+            <span class="tl-stat">最高 <b>${best[2].toFixed(1)}</b>（${ids[best[0]].slice(0, 10)}）</span>
+            ${period}
         </div>
-        <svg viewBox="0 0 ${W} ${Ht}" class="tl-svg" role="img" aria-label="${esc(ticker)} の順位推移">
-            ${grid}${marks}
+        <svg viewBox="0 0 ${W} ${Ht}" class="tl-svg" role="img" aria-label="${esc(ticker)} のスコア推移">
+            ${ticks}${bands}${marks}
             <path d="${path}" class="tl-line"/>
             ${dots}
             <text x="${L}" y="${Ht - 6}" class="tl-axis">${ids[0].slice(0, 10)}</text>
             <text x="${W - R}" y="${Ht - 6}" class="tl-axis" text-anchor="end">${ids[n - 1].slice(0, 10)}</text>
         </svg>`;
+}
+
+function niceTicks(lo, hi) {
+    const span = hi - lo;
+    const step = span <= 40 ? 10 : span <= 100 ? 20 : span <= 200 ? 50 : 100;
+    const out = [];
+    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) out.push(v);
+    return out;
 }
 
 // ============================================================

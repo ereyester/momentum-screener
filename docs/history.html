@@ -27,7 +27,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260927c">
+    <link rel="stylesheet" href="style.css?v=20260927d">
     <script>
         if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
             document.documentElement.setAttribute('data-theme', 'light');
@@ -149,12 +149,13 @@
                         <th class="r">現在値</th>
                         <th class="r">1ヶ月</th>
                         <th class="r">スコア</th>
+                        <th class="r">スコア差</th>
                     </tr>
                 </thead>
                 <tbody id="move-tbody"></tbody>
             </table>
         </div>
-        <p class="hint">行をクリックすると、その銘柄の順位推移（TOP100以内）を表示します。</p>
+        <p class="hint">行をクリックすると、その銘柄のスコア推移（TOP100以内の記録）を表示します。</p>
     </main>
 
     <footer id="site-footer">
@@ -162,6 +163,6 @@
         <p class="footer-sm">Momentum Chimp Universe Screener — 毎日 8:00・17:00 自動更新・履歴を蓄積中</p>
     </footer>
 
-    <script src="history.js?v=20260927c"></script>
+    <script src="history.js?v=20260927d"></script>
 </body>
 </html>

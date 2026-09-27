@@ -446,3 +446,4 @@ a.tab-btn{text-decoration:none;display:inline-block}
 @media(max-width:600px){
   #view-pills .pill,#quick-pills .pill{padding:5px 10px}
 }
+.tl-grade{stroke-width:1;stroke-dasharray:4 4;opacity:.45}
