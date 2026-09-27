@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="モメンタムチンパンのランキング履歴。更新ごとの順位上昇・下落・新規ランクイン銘柄をチェック。">
+
+    <meta property="og:title" content="🦍 モメンタムチンパン | 順位変動">
+    <meta property="og:description" content="モメンタムランキングの履歴から、順位を上げた銘柄・下げた銘柄をチェック。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ereyester.github.io/momentum-screener/history.html">
+    <meta property="og:image" content="https://ereyester.github.io/momentum-screener/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://ereyester.github.io/momentum-screener/og-image.png">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7YDGQEQNTJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-7YDGQEQNTJ');
+    </script>
+
+    <title>🦍 モメンタムチンパン | 順位変動</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header id="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <h1 id="site-title"><a href="./" class="title-link"><span class="logo-icon">🦍</span> モメンタムチンパン</a></h1>
+                <p class="header-sub">ランキング履歴 — 更新ごとの順位変動</p>
+            </div>
+            <div class="header-meta">
+                <button id="theme-toggle" class="theme-btn" title="テーマ切り替え">☀️</button>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">記録数</span>
+                    <span class="meta-value" id="stat-snaps">---</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">記録開始</span>
+                    <span class="meta-value" id="stat-first">---</span>
+                </div>
+                <div class="meta-divider"></div>
+                <div class="meta-item">
+                    <span class="meta-label">最新</span>
+                    <span class="meta-value" id="stat-last">---</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="tab-nav page-nav">
+        <a class="tab-btn" href="./">📊 ランキング</a>
+        <a class="tab-btn active" href="history.html">📈 順位変動</a>
+    </nav>
+
+    <main class="tab-content active" id="main-content">
+
+        <!-- ===== COMPARE CONTROLS ===== -->
+        <div class="cmp-panel">
+            <div class="cmp-row">
+                <div class="cmp-field">
+                    <label for="sel-from">比較元</label>
+                    <select id="sel-from" class="cmp-select"></select>
+                </div>
+                <span class="cmp-arrow">→</span>
+                <div class="cmp-field">
+                    <label for="sel-to">比較先</label>
+                    <select id="sel-to" class="cmp-select"></select>
+                </div>
+            </div>
+            <div class="cmp-row">
+                <div class="filter-pills" id="quick-pills">
+                    <button class="pill active" data-back="prev">前回</button>
+                    <button class="pill" data-back="1">1日前</button>
+                    <button class="pill" data-back="7">1週間前</button>
+                    <button class="pill" data-back="30">1ヶ月前</button>
+                </div>
+                <div class="filter-pills" id="market-pills">
+                    <button class="pill active" data-market="ALL">全体</button>
+                    <button class="pill" data-market="US">🇺🇸 米国</button>
+                    <button class="pill" data-market="JP">🇯🇵 日本</button>
+                </div>
+                <div class="filter-pills" id="scope-pills">
+                    <button class="pill active" data-scope="50">TOP50</button>
+                    <button class="pill" data-scope="100">TOP100</button>
+                    <button class="pill" data-scope="300">TOP300</button>
+                </div>
+            </div>
+            <p class="cmp-note" id="cmp-note" hidden></p>
+        </div>
+
+        <!-- ===== SUMMARY ===== -->
+        <div class="kpi-row" id="move-kpi">
+            <button class="kpi kpi-btn" data-view="up">
+                <div class="kpi-icon">🚀</div>
+                <div class="kpi-body"><span class="kpi-label">順位上昇</span><span class="kpi-value c-up" id="kpi-up">-</span></div>
+            </button>
+            <button class="kpi kpi-btn" data-view="down">
+                <div class="kpi-icon">📉</div>
+                <div class="kpi-body"><span class="kpi-label">順位下落</span><span class="kpi-value c-dn" id="kpi-down">-</span></div>
+            </button>
+            <button class="kpi kpi-btn" data-view="new">
+                <div class="kpi-icon">🆕</div>
+                <div class="kpi-body"><span class="kpi-label">新規ランクイン</span><span class="kpi-value" id="kpi-new">-</span></div>
+            </button>
+            <button class="kpi kpi-btn" data-view="out">
+                <div class="kpi-icon">👋</div>
+                <div class="kpi-body"><span class="kpi-label">圏外へ</span><span class="kpi-value" id="kpi-out">-</span></div>
+            </button>
+        </div>
+
+        <!-- ===== VIEW TABS ===== -->
+        <div class="toolbar">
+            <div class="filter-pills" id="view-pills">
+                <button class="pill active" data-view="up">🚀 上昇</button>
+                <button class="pill" data-view="down">📉 下落</button>
+                <button class="pill" data-view="new">🆕 新規</button>
+                <button class="pill" data-view="out">👋 圏外へ</button>
+                <button class="pill" data-view="all">📋 全体</button>
+            </div>
+            <span class="count-badge" id="result-count">0 銘柄</span>
+        </div>
+
+        <div class="table-wrap">
+            <table class="tbl" id="move-table">
+                <thead>
+                    <tr>
+                        <th class="r">順位</th>
+                        <th>変動</th>
+                        <th>銘柄</th>
+                        <th>名前</th>
+                        <th class="r">比較元</th>
+                        <th class="r">現在値</th>
+                        <th class="r">1ヶ月</th>
+                        <th class="r">スコア</th>
+                    </tr>
+                </thead>
+                <tbody id="move-tbody"></tbody>
+            </table>
+        </div>
+        <p class="hint">行をクリックすると、その銘柄の順位推移（TOP100以内）を表示します。</p>
+    </main>
+
+    <footer id="site-footer">
+        <p>⚠️ 本サイトは情報提供目的です。投資判断はご自身でお願いします。</p>
+        <p class="footer-sm">Momentum Chimp Universe Screener — 毎日 8:00・17:00 自動更新・履歴を蓄積中</p>
+    </footer>
+
+    <script src="history.js"></script>
+</body>
+</html>

@@ -26,6 +26,7 @@ from universe_screener import (
     _HEADERS,
     grade,
 )
+from history_store import save_snapshot, SNAPSHOT_TOP
 
 
 def fetch_jpx_names() -> dict[str, str]:
@@ -217,7 +218,7 @@ def main():
 
     # 4. 企業名取得（JPX + yfinance）
     top_n = 50
-    top_tickers = df.head(top_n + 10)["ticker"].tolist()
+    top_tickers = df.head(max(top_n + 10, SNAPSHOT_TOP))["ticker"].tolist()
     print(f"[Step 4] 上位{len(top_tickers)}銘柄の企業名取得中...")
     jpx_names = fetch_jpx_names()
     names = fetch_names_robust(top_tickers, jpx_names)
@@ -286,7 +287,25 @@ def main():
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
+    # 8. 履歴スナップショット保存
+    snap_rows = [
+        {
+            "rank": idx + 1,
+            "ticker": row["ticker"],
+            "name": names.get(row["ticker"], row["ticker"]),
+            "market": row["market"],
+            "currency": row["currency"],
+            "price": round(float(row["price"]), 2),
+            "day_chg": round(float(row["day_chg"]), 2),
+            "ret_1m": round(float(row["ret_1m"]), 2),
+            "score": round(float(row["score"]), 2),
+        }
+        for idx, (_, row) in enumerate(df.head(SNAPSHOT_TOP).iterrows())
+    ]
+    sid = save_snapshot(output["updated_at"], len(df), snap_rows)
+
     print(f"\n  ✅ JSON保存完了: {out_path}")
+    print(f"  履歴スナップショット: {sid}")
     print(f"  ランキング: {len(ranking)}銘柄")
     print(f"  デッキ: {len(deck_data['stocks'])}銘柄")
     print(f"  合計スキャン: {len(df)}銘柄")

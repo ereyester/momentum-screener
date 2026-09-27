@@ -6,6 +6,7 @@
 !/generate_web_data.py
 !/universe_screener.py
 !/momentum_screener.py
+!/history_store.py
 !/.github/
 !/.gitignore
 
