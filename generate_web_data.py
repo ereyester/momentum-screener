@@ -91,11 +91,17 @@ def fetch_names_robust(tickers: list[str], jpx_names: dict[str, str],
     return names
 
 
-def build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, mix_jp=6, usdjpy=150.0):
+def build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, top_mix=16, usdjpy=150.0):
     """build_deck() と同じロジックでデッキデータを生成（JSON用）"""
     us_top = df[df["market"] == "US"].head(top_us)
     jp_top = df[df["market"] == "JP"].head(top_jp)
-    deck = __import__("pandas").concat([us_top, jp_top]).reset_index(drop=True)
+    mix_top = df.head(top_mix)  # 日米ミックス: 市場を問わずスコア順位優先
+    deck = (
+        __import__("pandas").concat([us_top, jp_top, mix_top])
+        .drop_duplicates("ticker")
+        .sort_values("score", ascending=False)
+        .reset_index(drop=True)
+    )
 
     n_stocks = len(deck)
     budget_jpy = budget_man * 10_000
@@ -181,8 +187,12 @@ def build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, mix_jp=6, 
     return {
         "budget_man": budget_man,
         "usdjpy": round(usdjpy, 2),
-        # 日米ミックス時に使う銘柄数（stocks には米国 top_us + 日本 top_jp が入る）
-        "mix": {"US": top_us, "JP": mix_jp},
+        # 各デッキの構成銘柄（stocks はその和集合をスコア順に並べたもの）
+        "sets": {
+            "MIX": mix_top["ticker"].tolist(),
+            "US": us_top["ticker"].tolist(),
+            "JP": jp_top["ticker"].tolist(),
+        },
         "stocks": stocks,
         "total_alloc_man": round(total_alloc),
         "remaining_man": round(budget_man - total_alloc),
@@ -272,7 +282,7 @@ def main():
         })
 
     # デッキ生成
-    deck_data = build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, mix_jp=6, usdjpy=usdjpy)
+    deck_data = build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, top_mix=16, usdjpy=usdjpy)
 
     # 統計
     us_df = df[df["market"] == "US"]

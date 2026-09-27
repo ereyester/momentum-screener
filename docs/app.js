@@ -251,6 +251,11 @@ function renderDeck() {
 // 選択中の市場に応じてデッキ銘柄を選ぶ
 function deckStocks() {
     const all = DATA.deck.stocks;
+    const sets = DATA.deck.sets;
+    if (sets && sets[deckMarket]) {
+        const byTicker = Object.fromEntries(all.map(s => [s.ticker, s]));
+        return sets[deckMarket].map(t => byTicker[t]).filter(Boolean);
+    }
     const us = all.filter(s => s.market === 'US');
     const jp = all.filter(s => s.market === 'JP');
     if (deckMarket === 'US') return us;
