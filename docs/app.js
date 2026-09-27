@@ -5,6 +5,8 @@
 let DATA = null;
 let marketFilter = 'ALL';
 let sort = { key: 'score', dir: 'desc' };
+let deckMarket = 'MIX';
+try { deckMarket = localStorage.getItem('deckMarket') || 'MIX'; } catch (e) {}
 
 document.addEventListener('DOMContentLoaded', () => {
     initTheme();
@@ -135,10 +137,10 @@ function initTabs() {
 // Filters
 // ============================================================
 function initFilters() {
-    document.querySelectorAll('.pill').forEach(btn => {
+    document.querySelectorAll('#tab-ranking .pill').forEach(btn => {
         btn.addEventListener('click', () => {
             marketFilter = btn.dataset.market;
-            document.querySelectorAll('.pill').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('#tab-ranking .pill').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             renderRanking();
         });
@@ -232,18 +234,41 @@ function renderDeck() {
             updateDeckUI(val);
         }
     });
+
+    // 日米ミックス / 米国のみ / 日本のみ
+    const pills = document.querySelectorAll('#deck-market-pills .pill');
+    const syncPills = () => pills.forEach(b => b.classList.toggle('active', b.dataset.deck === deckMarket));
+    syncPills();
+    pills.forEach(btn => btn.addEventListener('click', () => {
+        deckMarket = btn.dataset.deck;
+        try { localStorage.setItem('deckMarket', deckMarket); } catch (e) {}
+        syncPills();
+        const val = parseInt(budgetInput.value);
+        updateDeckUI(!isNaN(val) && val > 0 ? val : DATA.deck.budget_man);
+    }));
+}
+
+// 選択中の市場に応じてデッキ銘柄を選ぶ
+function deckStocks() {
+    const all = DATA.deck.stocks;
+    const us = all.filter(s => s.market === 'US');
+    const jp = all.filter(s => s.market === 'JP');
+    if (deckMarket === 'US') return us;
+    if (deckMarket === 'JP') return jp;
+    const mix = DATA.deck.mix || { US: us.length, JP: jp.length };
+    return [...us.slice(0, mix.US), ...jp.slice(0, mix.JP)];
 }
 
 function updateDeckUI(budgetMan) {
-    const dk = DATA.deck;
+    const stocks = deckStocks();
     const budgetJpy = budgetMan * 10000;
-    const nStocks = dk.stocks.length;
+    const nStocks = stocks.length;
     const targetJpyPerStock = nStocks > 0 ? budgetJpy / nStocks : 0;
     
     let totalAllocMan = 0;
     
     // First pass: Allocate evenly based on targetJpyPerStock
-    const computedStocks = dk.stocks.map(item => {
+    const computedStocks = stocks.map(item => {
         let shares = 0;
         let entryJpy = item.currency === 'JPY' ? item.entry_price : item.entry_price * DATA.usdjpy;
         let lotSize = item.currency === 'JPY' ? 100 : 1;

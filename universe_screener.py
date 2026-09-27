@@ -24,11 +24,25 @@ _HEADERS = {
     )
 }
 
-def _read_html_with_ua(url: str) -> list:
+_HTML_CACHE: dict[str, str] = {}
+
+
+def _read_html_with_ua(url: str, retries: int = 4) -> list:
+    """Wikipedia等の表を取得。接続切れに備えてリトライし、同じURLは再取得しない"""
     import io as _io
-    resp = requests.get(url, headers=_HEADERS, timeout=20)
-    resp.raise_for_status()
-    return pd.read_html(_io.StringIO(resp.text))
+    import time as _time
+    if url not in _HTML_CACHE:
+        for attempt in range(retries):
+            try:
+                resp = requests.get(url, headers=_HEADERS, timeout=20)
+                resp.raise_for_status()
+                _HTML_CACHE[url] = resp.text
+                break
+            except requests.RequestException:
+                if attempt == retries - 1:
+                    raise
+                _time.sleep(5 * (attempt + 1))
+    return pd.read_html(_io.StringIO(_HTML_CACHE[url]))
 
 
 # ============================================================
