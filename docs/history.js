@@ -141,6 +141,9 @@ function initControls() {
         const tr = e.target.closest('tr[data-ticker]');
         if (tr) toggleTimeline(tr);
     });
+    // グラフのホバー / タップ
+    document.getElementById('move-tbody').addEventListener('pointermove', onTimelinePointer);
+    document.getElementById('move-tbody').addEventListener('pointerdown', onTimelinePointer);
 }
 
 function bindPills(sel, key, conv) {
@@ -283,7 +286,7 @@ function deltaBadge(x) {
 }
 
 // ============================================================
-// Rank timeline
+// Score / price timeline
 // ============================================================
 function toggleTimeline(tr) {
     const t = tr.dataset.ticker;
@@ -300,82 +303,167 @@ function renderTimeline(ticker) {
     if (box) box.innerHTML = timelineSVG(ticker);
 }
 
+// グラフの座標情報（ホバー表示用）
+let TL = null;
+
 function timelineSVG(ticker) {
-    if (!H.ranks) return '<div class="loading-txt">スコア推移を読み込み中...</div>';
+    if (!H.ranks) return '<div class="loading-txt">推移を読み込み中...</div>';
     const pts = H.ranks.ranks[ticker];
     if (!pts || !pts.length) return '<div class="loading-txt">TOP100に入った記録がありません</div>';
     if (pts[0].length < 3) return '<div class="loading-txt">スコアの記録がありません</div>';
+    const hasPrice = pts[0].length >= 4;
 
     const ids = H.ranks.ids;
     const n = ids.length;
-    const W = 900, Ht = 190, L = 40, R = 40, T = 12, B = 26;
-    const scores = pts.map(p => p[2]);
-    const hi = Math.max(...scores), lo = Math.min(...scores);
-    // 縦軸: 0〜最高値（グレード境界が見える範囲）に少し余白
-    const yMax = Math.ceil(Math.max(hi, 12) * 1.1 / 10) * 10;
-    const yMin = Math.min(0, Math.floor(lo / 10) * 10);
-    const x = i => L + (n > 1 ? i / (n - 1) : 0.5) * (W - L - R);
-    const y = v => T + (yMax - v) / (yMax - yMin) * (Ht - T - B);
+    const [name, market] = H.ranks.names[ticker] || [ticker, 'US'];
+    const cur = market === 'JP' ? 'JPY' : 'USD';
 
-    // 連続する回だけ線でつなぐ（TOP100圏外の回で途切れる）
-    let path = '', prev = -2;
-    for (const [i, , v] of pts) {
-        path += (i === prev + 1 ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(v).toFixed(1);
-        prev = i;
-    }
-    // グレード境界線
+    // レイアウト: 上段スコア / 下段株価（横軸共通）
+    const W = 900, L = 56, R = 40;
+    const S = { top: 22, bot: 160 };   // スコア段
+    const P = { top: 196, bot: 292 };  // 株価段
+    const Ht = hasPrice ? 318 : 188;
+    const x = i => L + (n > 1 ? i / (n - 1) : 0.5) * (W - L - R);
+
+    // --- スコア段 ---
+    const scores = pts.map(p => p[2]);
+    const sHi = Math.max(...scores), sLo = Math.min(...scores);
+    const sMax = Math.ceil(Math.max(sHi, 12) * 1.1 / 10) * 10;
+    const sMin = Math.min(0, Math.floor(sLo / 10) * 10);
+    const ys = v => S.top + (sMax - v) / (sMax - sMin) * (S.bot - S.top);
+
     let lastLabelY = -Infinity;
     const bands = [['SSS', 60], ['SS', 40], ['S', 25], ['A', 12], ['B', 4]]
-        .filter(([, v]) => v <= yMax && v >= yMin)
+        .filter(([, v]) => v <= sMax && v >= sMin)
         .map(([g, v]) => {
-            const yy = y(v);
+            const yy = ys(v);
             const label = yy - lastLabelY >= 12
                 ? `<text x="${W - R + 6}" y="${yy + 4}" class="tl-axis" style="fill:${gradeColor(g)}">${g}</text>` : '';
             if (label) lastLabelY = yy;
             return `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" class="tl-grade" style="stroke:${gradeColor(g)}"/>${label}`;
         }).join('');
-    const ticks = niceTicks(yMin, yMax).map(v =>
-        `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="tl-grid"/>
-         <text x="${L - 6}" y="${y(v) + 4}" class="tl-axis" text-anchor="end">${v}</text>`).join('');
-    const selIdx = [H.from, H.to].map(id => ids.indexOf(id)).filter(i => i >= 0);
-    const marks = selIdx.map(i => `<line x1="${x(i)}" x2="${x(i)}" y1="${T}" y2="${Ht - B}" class="tl-mark"/>`).join('');
-    const dots = pts.map(([i, , v]) =>
-        `<circle cx="${x(i)}" cy="${y(v)}" r="${pts.length <= 60 ? 2.6 : 1.6}" class="tl-dot" style="fill:${gradeColor(getGrade(v))}"><title>${ids[i].replace('_', ' ')}: スコア ${v.toFixed(1)}</title></circle>`).join('');
+    const sTicks = niceTicks(sMin, sMax).map(v =>
+        `<line x1="${L}" x2="${W - R}" y1="${ys(v)}" y2="${ys(v)}" class="tl-grid"/>
+         <text x="${L - 6}" y="${ys(v) + 4}" class="tl-axis" text-anchor="end">${v}</text>`).join('');
+    const sDots = pts.map(([i, , v]) =>
+        `<circle cx="${x(i)}" cy="${ys(v)}" r="${pts.length <= 60 ? 2.6 : 1.6}" style="fill:${gradeColor(getGrade(v))}"/>`).join('');
 
+    // --- 株価段 ---
+    let priceSvg = '', yp = null;
+    if (hasPrice) {
+        const prices = pts.map(p => p[3]);
+        const pHi = Math.max(...prices), pLo = Math.min(...prices);
+        const pad = (pHi - pLo) * 0.08 || pHi * 0.05;
+        const pMax = pHi + pad, pMin = Math.max(0, pLo - pad);
+        yp = v => P.top + (pMax - v) / (pMax - pMin) * (P.bot - P.top);
+        const pTicks = niceTicks(pMin, pMax, 3).map(v =>
+            `<line x1="${L}" x2="${W - R}" y1="${yp(v)}" y2="${yp(v)}" class="tl-grid"/>
+             <text x="${L - 6}" y="${yp(v) + 4}" class="tl-axis" text-anchor="end">${fmtAxisPrice(v, cur)}</text>`).join('');
+        priceSvg = `
+            <text x="${L}" y="${P.top - 8}" class="tl-panel">株価</text>
+            ${pTicks}
+            <path d="${linePath(pts, x, p => yp(p[3]))}" class="tl-price-line"/>
+            ${pts.length <= 60 ? pts.map(p => `<circle cx="${x(p[0])}" cy="${yp(p[3])}" r="2.2" class="tl-price-dot"/>`).join('') : ''}`;
+    }
+
+    const selIdx = [H.from, H.to].map(id => ids.indexOf(id)).filter(i => i >= 0);
+    const marks = selIdx.map(i =>
+        `<line x1="${x(i)}" x2="${x(i)}" y1="${S.top}" y2="${hasPrice ? P.bot : S.bot}" class="tl-mark"/>`).join('');
+
+    TL = { pts, ids, x, ys, yp, cur, W, hasPrice };
+
+    // --- 見出し ---
     const last = pts[pts.length - 1];
     const best = pts.reduce((m, p) => p[2] > m[2] ? p : m);
-    const [name] = H.ranks.names[ticker] || [ticker];
     const lastGrade = getGrade(last[2]);
-
-    // 比較期間のスコア変化（両方の回に記録がある場合）
-    const at = id => { const i = ids.indexOf(id); const p = pts.find(q => q[0] === i); return p ? p[2] : null; };
-    const sf = at(H.from), st = at(H.to);
-    const period = sf != null && st != null
-        ? `<span class="tl-stat">比較期間 <b class="${pctCls(Math.round((st - sf) * 10))}">${st - sf > 0 ? '+' : ''}${(st - sf).toFixed(1)}</b>（${sf.toFixed(1)} → ${st.toFixed(1)}）</span>`
-        : '';
+    const at = id => { const i = ids.indexOf(id); return pts.find(q => q[0] === i) || null; };
+    const pf = at(H.from), pt = at(H.to);
+    let period = '';
+    if (pf && pt) {
+        const ds = pt[2] - pf[2];
+        period += `<span class="tl-stat">比較期間スコア <b class="${pctCls(Math.round(ds * 10))}">${ds > 0 ? '+' : ''}${ds.toFixed(1)}</b></span>`;
+        if (hasPrice && pf[3] > 0) {
+            const dp = (pt[3] / pf[3] - 1) * 100;
+            period += `<span class="tl-stat">比較期間株価 <b class="${pctCls(dp)}">${fmtPct(dp)}</b>（${fmtPrice(pf[3], cur)} → ${fmtPrice(pt[3], cur)}）</span>`;
+        }
+    }
 
     return `<div class="tl-head">
             <span class="c-ticker">${esc(ticker)}</span>
             <span class="c-name">${esc(name)}</span>
-            <span class="tl-stat">直近 <b style="color:${gradeColor(lastGrade)}">${last[2].toFixed(1)}</b> <span class="gr gr-${lastGrade.toLowerCase()}">${lastGrade}</span>（${ids[last[0]].slice(0, 10)}）</span>
-            <span class="tl-stat">最高 <b>${best[2].toFixed(1)}</b>（${ids[best[0]].slice(0, 10)}）</span>
+            <span class="tl-stat">直近スコア <b style="color:${gradeColor(lastGrade)}">${last[2].toFixed(1)}</b> <span class="gr gr-${lastGrade.toLowerCase()}">${lastGrade}</span></span>
+            ${hasPrice ? `<span class="tl-stat">直近株価 <b>${fmtPrice(last[3], cur)}</b></span>` : ''}
+            <span class="tl-stat">最高スコア <b>${best[2].toFixed(1)}</b>（${ids[best[0]].slice(0, 10)}）</span>
             ${period}
         </div>
-        <svg viewBox="0 0 ${W} ${Ht}" class="tl-svg" role="img" aria-label="${esc(ticker)} のスコア推移">
-            ${ticks}${bands}${marks}
-            <path d="${path}" class="tl-line"/>
-            ${dots}
+        <div class="tl-read" id="tl-read">グラフにカーソルを合わせると（スマホはタップ）その回のスコアと株価を表示します</div>
+        <svg viewBox="0 0 ${W} ${Ht}" class="tl-svg" id="tl-svg" role="img" aria-label="${esc(ticker)} のスコアと株価の推移">
+            <text x="${L}" y="${S.top - 8}" class="tl-panel">スコア</text>
+            ${sTicks}${bands}${marks}
+            <path d="${linePath(pts, x, p => ys(p[2]))}" class="tl-line"/>
+            ${sDots}
+            ${priceSvg}
+            <line id="tl-cursor" class="tl-cursor" x1="0" x2="0" y1="${S.top}" y2="${hasPrice ? P.bot : S.bot}" visibility="hidden"/>
+            <circle id="tl-cur-s" r="4.5" class="tl-cur-dot" visibility="hidden"/>
+            ${hasPrice ? '<circle id="tl-cur-p" r="4.5" class="tl-cur-dot tl-cur-price" visibility="hidden"/>' : ''}
             <text x="${L}" y="${Ht - 6}" class="tl-axis">${ids[0].slice(0, 10)}</text>
             <text x="${W - R}" y="${Ht - 6}" class="tl-axis" text-anchor="end">${ids[n - 1].slice(0, 10)}</text>
+            <rect x="${L}" y="0" width="${W - L - R}" height="${Ht - 20}" fill="transparent" class="tl-hit"/>
         </svg>`;
 }
 
-function niceTicks(lo, hi) {
+// 連続する回だけ線でつなぐ（TOP100圏外の回で途切れる）
+function linePath(pts, x, yOf) {
+    let d = '', prev = -2;
+    for (const p of pts) {
+        d += (p[0] === prev + 1 ? 'L' : 'M') + x(p[0]).toFixed(1) + ' ' + yOf(p).toFixed(1);
+        prev = p[0];
+    }
+    return d;
+}
+
+// ホバー / タップで、その回のスコアと株価を表示
+function onTimelinePointer(e) {
+    const svg = e.target.closest('#tl-svg');
+    if (!svg || !TL) return;
+    const rect = svg.getBoundingClientRect();
+    const sx = (e.clientX - rect.left) / rect.width * TL.W;
+    let best = null, bd = Infinity;
+    for (const p of TL.pts) {
+        const d = Math.abs(TL.x(p[0]) - sx);
+        if (d < bd) { bd = d; best = p; }
+    }
+    if (!best) return;
+    const cx = TL.x(best[0]);
+    const set = (id, attrs) => {
+        const el = document.getElementById(id);
+        if (el) for (const [k, v] of Object.entries(attrs)) el.setAttribute(k, v);
+    };
+    const g = getGrade(best[2]);
+    set('tl-cursor', { x1: cx, x2: cx, visibility: 'visible' });
+    set('tl-cur-s', { cx, cy: TL.ys(best[2]), visibility: 'visible', style: `fill:${gradeColor(g)}` });
+    if (TL.hasPrice) set('tl-cur-p', { cx, cy: TL.yp(best[3]), visibility: 'visible' });
+    const t = TL.ids[best[0]];
+    document.getElementById('tl-read').innerHTML =
+        `<b>${t.slice(0, 10)} ${t.slice(11, 13)}:${t.slice(13, 15)}</b>
+         　スコア <b style="color:${gradeColor(g)}">${best[2].toFixed(1)}</b> <span class="gr gr-${g.toLowerCase()}">${g}</span>
+         ${TL.hasPrice ? `　株価 <b>${fmtPrice(best[3], TL.cur)}</b>` : ''}`;
+}
+
+function niceTicks(lo, hi, count = 4) {
     const span = hi - lo;
-    const step = span <= 40 ? 10 : span <= 100 ? 20 : span <= 200 ? 50 : 100;
+    if (!(span > 0)) return [lo];
+    const raw = span / count;
+    const mag = Math.pow(10, Math.floor(Math.log10(raw)));
+    const step = [1, 2, 2.5, 5, 10].map(m => m * mag).find(s => s >= raw);
     const out = [];
-    for (let v = Math.ceil(lo / step) * step; v <= hi; v += step) out.push(v);
+    for (let v = Math.ceil(lo / step) * step; v <= hi + 1e-9; v += step) out.push(+v.toFixed(6));
     return out;
+}
+
+function fmtAxisPrice(v, c) {
+    if (c === 'JPY') return '¥' + (v >= 10000 ? +(v / 10000).toFixed(1) + '万' : Math.round(v).toLocaleString());
+    return '$' + (v >= 1000 ? Math.round(v).toLocaleString() : v >= 10 ? v.toFixed(0) : v.toFixed(2));
 }
 
 // ============================================================

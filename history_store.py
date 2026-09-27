@@ -50,17 +50,17 @@ def rebuild_indexes() -> None:
 
     index = [{"id": s["id"], "t": s["t"], "total": s["total"], "n": len(s["rows"])} for s in snaps]
 
-    # 疎な形式 {ticker: [[スナップショット番号, 順位, スコア], ...]}、TRACK_TOP 位以内のみ
+    # 疎な形式 {ticker: [[スナップショット番号, 順位, スコア, 株価], ...]}、TRACK_TOP 位以内のみ
     ranks: dict[str, list] = {}
     names: dict[str, list] = {}
     for i, s in enumerate(snaps):
         c = s["cols"]
-        ri, ti, ni, mi, si = (c.index(k) for k in ("rank", "ticker", "name", "market", "score"))
+        ri, ti, ni, mi, si, pi = (c.index(k) for k in ("rank", "ticker", "name", "market", "score", "price"))
         for row in s["rows"]:
             if row[ri] > TRACK_TOP:
                 break
             t = row[ti]
-            ranks.setdefault(t, []).append([i, row[ri], row[si]])
+            ranks.setdefault(t, []).append([i, row[ri], row[si], row[pi]])
             names[t] = [row[ni], row[mi]]  # 最新の社名・市場で上書き
 
     with open(os.path.join(HISTORY_DIR, "index.json"), "w", encoding="utf-8") as f:

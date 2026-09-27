@@ -447,3 +447,14 @@ a.tab-btn{text-decoration:none;display:inline-block}
   #view-pills .pill,#quick-pills .pill{padding:5px 10px}
 }
 .tl-grade{stroke-width:1;stroke-dasharray:4 4;opacity:.45}
+
+/* スコア＋株価グラフ */
+.tl-panel{fill:var(--txt2);font-size:12px;font-weight:700;font-family:var(--font)}
+.tl-price-line{fill:none;stroke:#38bdf8;stroke-width:2;stroke-linejoin:round;stroke-linecap:round}
+.tl-price-dot{fill:#38bdf8}
+.tl-cursor{stroke:var(--txt3);stroke-width:1}
+.tl-cur-dot{stroke:var(--bg2);stroke-width:2}
+.tl-cur-price{fill:#38bdf8}
+.tl-hit{cursor:crosshair}
+.tl-read{font-size:.8rem;color:var(--txt2);min-height:1.8em;margin-bottom:2px;font-variant-numeric:tabular-nums}
+.tl-read b{color:var(--txt)}
