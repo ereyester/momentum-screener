@@ -28,6 +28,10 @@ from universe_screener import (
 )
 from history_store import save_snapshot, SNAPSHOT_TOP
 
+# これを下回ったらリスト取得失敗とみなして更新を中止する
+MIN_US = 400
+MIN_JP = 2000
+
 
 def fetch_jpx_names() -> dict[str, str]:
     """JPXの銘柄一覧Excelから企業名を取得（日本株用・超信頼性）"""
@@ -87,7 +91,7 @@ def fetch_names_robust(tickers: list[str], jpx_names: dict[str, str],
     return names
 
 
-def build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=6, usdjpy=150.0):
+def build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, mix_jp=6, usdjpy=150.0):
     """build_deck() と同じロジックでデッキデータを生成（JSON用）"""
     us_top = df[df["market"] == "US"].head(top_us)
     jp_top = df[df["market"] == "JP"].head(top_jp)
@@ -177,6 +181,8 @@ def build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=6, usdjpy=150.
     return {
         "budget_man": budget_man,
         "usdjpy": round(usdjpy, 2),
+        # 日米ミックス時に使う銘柄数（stocks には米国 top_us + 日本 top_jp が入る）
+        "mix": {"US": top_us, "JP": mix_jp},
         "stocks": stocks,
         "total_alloc_man": round(total_alloc),
         "remaining_man": round(budget_man - total_alloc),
@@ -199,7 +205,14 @@ def main():
     )
     if not universe:
         print("銘柄リストを取得できませんでした。")
-        return
+        sys.exit(1)
+
+    # リスト取得に失敗したまま公開しないよう、銘柄数が少なすぎたら中止
+    n_us = sum(1 for m in universe.values() if m == "US")
+    n_jp = sum(1 for m in universe.values() if m == "JP")
+    if n_us < MIN_US or n_jp < MIN_JP:
+        print(f"❌ 銘柄数が不足しています (米国 {n_us} / 日本 {n_jp})。データを更新せずに終了します。")
+        sys.exit(1)
 
     tickers = list(universe.keys())
 
@@ -259,7 +272,7 @@ def main():
         })
 
     # デッキ生成
-    deck_data = build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=6, usdjpy=usdjpy)
+    deck_data = build_deck_data(df, names, budget_man=3000, top_us=10, top_jp=10, mix_jp=6, usdjpy=usdjpy)
 
     # 統計
     us_df = df[df["market"] == "US"]

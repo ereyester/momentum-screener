@@ -31,7 +31,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Noto+Sans+JP:wght@400;500;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260927b">
     <script>
         // Check saved theme or system preference before rendering to prevent flash
         if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: light)').matches)) {
@@ -121,6 +121,11 @@
         <section id="tab-deck" class="tab-content">
             <div class="deck-top">
                 <h2 class="section-title">🏆 最強モメンタムデッキ</h2>
+                <div class="filter-pills" id="deck-market-pills">
+                    <button class="pill active" data-deck="MIX">🌏 日米ミックス</button>
+                    <button class="pill" data-deck="US">🇺🇸 米国のみ</button>
+                    <button class="pill" data-deck="JP">🇯🇵 日本のみ</button>
+                </div>
                 <div class="budget-ctrl">
                     <label for="budget-input">予算</label>
                     <input type="number" id="budget-input" value="3000" min="100" max="100000" step="100">
@@ -167,6 +172,6 @@
         <p class="footer-sm">Momentum Chimp Universe Screener — 毎日 8:00・17:00 自動更新</p>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js?v=20260927b"></script>
 </body>
 </html>
