@@ -4,8 +4,6 @@ S&P500 + Nasdaq100 + 日経225 全銘柄からモメンタム最強デッキを�
 """
 
 import sys, io
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
-sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding="utf-8", errors="replace")
 
 import yfinance as yf
 import pandas as pd
@@ -108,12 +106,12 @@ def get_jpx_tickers() -> list[str]:
     print("  (JPXから最新リストをダウンロード中...) ", end="", flush=True)
     try:
         import io as _io
-        url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls"
+        url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xlsx"
         resp = requests.get(url, headers=_HEADERS, timeout=30)
         resp.raise_for_status()
         df = pd.read_excel(_io.BytesIO(resp.content))
         
-        target_markets = ["プライム（内国株式）"]
+        target_markets = ["プライム（内国株式）", "スタンダード（内国株式）"]
         if "市場・商品区分" in df.columns and "コード" in df.columns:
             df = df[df["市場・商品区分"].isin(target_markets)]
             codes = df["コード"].dropna().astype(str).tolist()

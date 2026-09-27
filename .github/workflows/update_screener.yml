@@ -4,6 +4,8 @@ on:
   schedule:
     # 毎日 日本時間 8:00 に実行 (UTCの23:00)
     - cron: '0 23 * * *'
+    # 毎日 日本時間 17:00 に実行 (UTCの8:00) ※東証大引け後
+    - cron: '0 8 * * *'
   # 手動実行も可能にする
   workflow_dispatch:
 
@@ -17,7 +19,7 @@ concurrency:
 jobs:
   update-data:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
 
     steps:
       - name: Checkout repository
@@ -42,6 +44,6 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git add docs/data/latest.json
-          git commit -m "🚀 Auto-update momentum data $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git commit -m "🚀 Auto-update momentum data $(TZ=Asia/Tokyo date +'%Y-%m-%d %H:%M')" || echo "No changes to commit"
           git pull --rebase -X theirs origin main
           git push

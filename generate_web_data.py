@@ -31,7 +31,7 @@ def fetch_jpx_names() -> dict[str, str]:
     """JPXの銘柄一覧Excelから企業名を取得（日本株用・超信頼性）"""
     print("  JPXから企業名データをダウンロード中...", end=" ", flush=True)
     try:
-        url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xls"
+        url = "https://www.jpx.co.jp/markets/statistics-equities/misc/tvdivq0000001vg2-att/data_j.xlsx"
         resp = requests.get(url, headers=_HEADERS, timeout=30)
         resp.raise_for_status()
         df = pd.read_excel(io.BytesIO(resp.content))
