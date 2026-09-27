@@ -19,6 +19,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from universe_screener import (
     get_universe,
+    get_us_names,
     batch_download,
     calc_momentum_scores,
     _get_usdjpy,
@@ -62,7 +63,13 @@ def fetch_names_robust(tickers: list[str], jpx_names: dict[str, str],
             names[t] = jpx_names[t]
             continue
 
-    # 残りの銘柄（主に米国株）は yfinance から取得
+    # 米国株: Wikipedia の構成銘柄一覧から取得（Yahooの401対策）
+    us_names = get_us_names()
+    for t in tickers:
+        if t not in names and t in us_names:
+            names[t] = us_names[t]
+
+    # 残りの銘柄は yfinance から取得
     remaining = [t for t in tickers if t not in names]
     if remaining:
         print(f"  yfinanceから{len(remaining)}銘柄の社名取得中...", end=" ", flush=True)

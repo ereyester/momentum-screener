@@ -48,16 +48,45 @@ def get_sp500_tickers() -> list[str]:
         return []
 
 
+NASDAQ100_URLS = [
+    "https://en.wikipedia.org/wiki/List_of_NASDAQ-100_companies",
+    "https://en.wikipedia.org/wiki/Nasdaq-100",
+]
+
+
 def get_nasdaq100_tickers() -> list[str]:
-    try:
-        tables = _read_html_with_ua("https://en.wikipedia.org/wiki/Nasdaq-100")
-        for t in tables:
-            if "Ticker" in t.columns or "Symbol" in t.columns:
-                col = "Ticker" if "Ticker" in t.columns else "Symbol"
-                return t[col].dropna().tolist()
-    except Exception as e:
-        print(f"  Nasdaq100リスト取得失敗: {e}")
+    for url in NASDAQ100_URLS:
+        try:
+            for t in _read_html_with_ua(url):
+                if "Ticker" in t.columns or "Symbol" in t.columns:
+                    col = "Ticker" if "Ticker" in t.columns else "Symbol"
+                    return t[col].dropna().tolist()
+        except Exception as e:
+            print(f"  Nasdaq100リスト取得失敗 ({url}): {e}")
     return []
+
+
+def get_us_names() -> dict[str, str]:
+    """Wikipedia の S&P500 / Nasdaq100 一覧から米国株の社名を取得（yfinance不要）"""
+    names = {}
+    try:
+        t = _read_html_with_ua(
+            "https://en.wikipedia.org/wiki/List_of_S%26P_500_companies"
+        )[0]
+        for sym, name in zip(t["Symbol"], t["Security"]):
+            names[str(sym).replace(".", "-")] = str(name)
+    except Exception as e:
+        print(f"  S&P500社名取得失敗: {e}")
+    for url in NASDAQ100_URLS:
+        try:
+            for t in _read_html_with_ua(url):
+                if "Ticker" in t.columns and "Company" in t.columns:
+                    for sym, name in zip(t["Ticker"], t["Company"]):
+                        names.setdefault(str(sym).replace(".", "-"), str(name))
+                    return names
+        except Exception:
+            pass
+    return names
 
 
 def get_nikkei225_tickers() -> list[str]:
