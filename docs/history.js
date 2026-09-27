@@ -324,17 +324,23 @@ function timelineSVG(ticker) {
         prev = i;
     }
     // グレード境界線
+    let lastLabelY = -Infinity;
     const bands = [['SSS', 60], ['SS', 40], ['S', 25], ['A', 12], ['B', 4]]
         .filter(([, v]) => v <= yMax && v >= yMin)
-        .map(([g, v]) => `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="tl-grade" style="stroke:${gradeColor(g)}"/>
-            <text x="${W - R + 6}" y="${y(v) + 4}" class="tl-axis" style="fill:${gradeColor(g)}">${g}</text>`).join('');
+        .map(([g, v]) => {
+            const yy = y(v);
+            const label = yy - lastLabelY >= 12
+                ? `<text x="${W - R + 6}" y="${yy + 4}" class="tl-axis" style="fill:${gradeColor(g)}">${g}</text>` : '';
+            if (label) lastLabelY = yy;
+            return `<line x1="${L}" x2="${W - R}" y1="${yy}" y2="${yy}" class="tl-grade" style="stroke:${gradeColor(g)}"/>${label}`;
+        }).join('');
     const ticks = niceTicks(yMin, yMax).map(v =>
         `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" class="tl-grid"/>
          <text x="${L - 6}" y="${y(v) + 4}" class="tl-axis" text-anchor="end">${v}</text>`).join('');
     const selIdx = [H.from, H.to].map(id => ids.indexOf(id)).filter(i => i >= 0);
     const marks = selIdx.map(i => `<line x1="${x(i)}" x2="${x(i)}" y1="${T}" y2="${Ht - B}" class="tl-mark"/>`).join('');
-    const dots = pts.map(([i, r, v]) =>
-        `<circle cx="${x(i)}" cy="${y(v)}" r="${pts.length <= 60 ? 2.6 : 1.6}" class="tl-dot" style="fill:${gradeColor(getGrade(v))}"><title>${ids[i].replace('_', ' ')}: スコア ${v.toFixed(1)}（${r}位）</title></circle>`).join('');
+    const dots = pts.map(([i, , v]) =>
+        `<circle cx="${x(i)}" cy="${y(v)}" r="${pts.length <= 60 ? 2.6 : 1.6}" class="tl-dot" style="fill:${gradeColor(getGrade(v))}"><title>${ids[i].replace('_', ' ')}: スコア ${v.toFixed(1)}</title></circle>`).join('');
 
     const last = pts[pts.length - 1];
     const best = pts.reduce((m, p) => p[2] > m[2] ? p : m);
@@ -351,7 +357,7 @@ function timelineSVG(ticker) {
     return `<div class="tl-head">
             <span class="c-ticker">${esc(ticker)}</span>
             <span class="c-name">${esc(name)}</span>
-            <span class="tl-stat">直近 <b style="color:${gradeColor(lastGrade)}">${last[2].toFixed(1)}</b> <span class="gr gr-${lastGrade.toLowerCase()}">${lastGrade}</span>（${ids[last[0]].slice(0, 10)}・${last[1]}位）</span>
+            <span class="tl-stat">直近 <b style="color:${gradeColor(lastGrade)}">${last[2].toFixed(1)}</b> <span class="gr gr-${lastGrade.toLowerCase()}">${lastGrade}</span>（${ids[last[0]].slice(0, 10)}）</span>
             <span class="tl-stat">最高 <b>${best[2].toFixed(1)}</b>（${ids[best[0]].slice(0, 10)}）</span>
             ${period}
         </div>
