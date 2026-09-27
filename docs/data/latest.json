@@ -1,10 +1,10 @@
 {
-  "updated_at": "2026-09-27 13:44:05",
-  "total_scanned": 3610,
+  "updated_at": "2026-09-27 22:49:07",
+  "total_scanned": 3625,
   "stats": {
-    "us_count": 503,
+    "us_count": 518,
     "jp_count": 3107,
-    "avg_score_us": 1.32,
+    "avg_score_us": 1.54,
     "avg_score_jp": 5.47
   },
   "usdjpy": 157.18,
@@ -12,7 +12,7 @@
     {
       "rank": 1,
       "ticker": "MRNA",
-      "name": "MRNA",
+      "name": "Moderna",
       "market": "US",
       "currency": "USD",
       "price": 198.88,
@@ -348,7 +348,7 @@
     {
       "rank": 15,
       "ticker": "DELL",
-      "name": "DELL",
+      "name": "Dell Technologies",
       "market": "US",
       "currency": "USD",
       "price": 562.89,
@@ -468,7 +468,7 @@
     {
       "rank": 20,
       "ticker": "AMD",
-      "name": "AMD",
+      "name": "Advanced Micro Devices",
       "market": "US",
       "currency": "USD",
       "price": 630.63,
@@ -660,7 +660,7 @@
     {
       "rank": 28,
       "ticker": "P",
-      "name": "P",
+      "name": "Everpure",
       "market": "US",
       "currency": "USD",
       "price": 126.0,
@@ -756,7 +756,7 @@
     {
       "rank": 32,
       "ticker": "HPE",
-      "name": "HPE",
+      "name": "Hewlett Packard Enterprise",
       "market": "US",
       "currency": "USD",
       "price": 62.94,
@@ -804,7 +804,7 @@
     {
       "rank": 34,
       "ticker": "CRWD",
-      "name": "CRWD",
+      "name": "CrowdStrike",
       "market": "US",
       "currency": "USD",
       "price": 252.13,
@@ -876,7 +876,7 @@
     {
       "rank": 37,
       "ticker": "INTC",
-      "name": "INTC",
+      "name": "Intel",
       "market": "US",
       "currency": "USD",
       "price": 123.0,
@@ -900,7 +900,7 @@
     {
       "rank": 38,
       "ticker": "ILMN",
-      "name": "ILMN",
+      "name": "Illumina, Inc.",
       "market": "US",
       "currency": "USD",
       "price": 270.0,
@@ -995,6 +995,30 @@
     },
     {
       "rank": 42,
+      "ticker": "ALAB",
+      "name": "Astera Labs",
+      "market": "US",
+      "currency": "USD",
+      "price": 364.62,
+      "day_chg": 1.14,
+      "ret_1m": 19.91,
+      "ret_3m": -20.03,
+      "ret_6m": 224.19,
+      "ret_1y": 84.36,
+      "ytd_chg": 103.06,
+      "rsi": 62.7,
+      "from_ath": -24.51,
+      "vol_ratio": 0.76,
+      "volatility": 0.062,
+      "score": 46.79,
+      "ma5": 357.96,
+      "ma20": 303.21,
+      "ma50": 305.03,
+      "high_52w": 483.02,
+      "low_52w": 100.27
+    },
+    {
+      "rank": 43,
       "ticker": "8388.T",
       "name": "阿波銀行",
       "market": "JP",
@@ -1018,7 +1042,7 @@
       "low_52w": 3402.24
     },
     {
-      "rank": 43,
+      "rank": 44,
       "ticker": "7480.T",
       "name": "スズデン",
       "market": "JP",
@@ -1042,9 +1066,9 @@
       "low_52w": 1560.06
     },
     {
-      "rank": 44,
+      "rank": 45,
       "ticker": "MU",
-      "name": "MU",
+      "name": "Micron Technology",
       "market": "US",
       "currency": "USD",
       "price": 1082.28,
@@ -1066,7 +1090,7 @@
       "low_52w": 157.02
     },
     {
-      "rank": 45,
+      "rank": 46,
       "ticker": "7475.T",
       "name": "アルビス",
       "market": "JP",
@@ -1090,7 +1114,7 @@
       "low_52w": 2378.0
     },
     {
-      "rank": 46,
+      "rank": 47,
       "ticker": "6098.T",
       "name": "リクルートホールディングス",
       "market": "JP",
@@ -1114,7 +1138,7 @@
       "low_52w": 6102.28
     },
     {
-      "rank": 47,
+      "rank": 48,
       "ticker": "4746.T",
       "name": "東計電算",
       "market": "JP",
@@ -1138,7 +1162,7 @@
       "low_52w": 3633.34
     },
     {
-      "rank": 48,
+      "rank": 49,
       "ticker": "7256.T",
       "name": "河西工業",
       "market": "JP",
@@ -1162,7 +1186,7 @@
       "low_52w": 82.0
     },
     {
-      "rank": 49,
+      "rank": 50,
       "ticker": "7743.T",
       "name": "シード",
       "market": "JP",
@@ -1184,30 +1208,6 @@
       "ma50": 623.06,
       "high_52w": 793.0,
       "low_52w": 480.0
-    },
-    {
-      "rank": 50,
-      "ticker": "6317.T",
-      "name": "北川鉄工所",
-      "market": "JP",
-      "currency": "JPY",
-      "price": 2550.0,
-      "day_chg": -0.78,
-      "ret_1m": 37.61,
-      "ret_3m": 46.38,
-      "ret_6m": 65.84,
-      "ret_1y": 60.41,
-      "ytd_chg": 53.84,
-      "rsi": 86.5,
-      "from_ath": -0.78,
-      "vol_ratio": 0.84,
-      "volatility": 0.064,
-      "score": 42.13,
-      "ma5": 2520.8,
-      "ma20": 2022.25,
-      "ma50": 1854.76,
-      "high_52w": 2570.0,
-      "low_52w": 1475.32
     }
   ],
   "deck": {
@@ -1216,7 +1216,7 @@
     "stocks": [
       {
         "ticker": "MRNA",
-        "name": "MRNA",
+        "name": "Moderna",
         "market": "US",
         "currency": "USD",
         "price": 198.88,
@@ -1232,7 +1232,7 @@
       },
       {
         "ticker": "DELL",
-        "name": "DELL",
+        "name": "Dell Technologies",
         "market": "US",
         "currency": "USD",
         "price": 562.89,
@@ -1248,7 +1248,7 @@
       },
       {
         "ticker": "AMD",
-        "name": "AMD",
+        "name": "Advanced Micro Devices",
         "market": "US",
         "currency": "USD",
         "price": 630.63,
@@ -1264,7 +1264,7 @@
       },
       {
         "ticker": "P",
-        "name": "P",
+        "name": "Everpure",
         "market": "US",
         "currency": "USD",
         "price": 126.0,
@@ -1280,7 +1280,7 @@
       },
       {
         "ticker": "HPE",
-        "name": "HPE",
+        "name": "Hewlett Packard Enterprise",
         "market": "US",
         "currency": "USD",
         "price": 62.94,
@@ -1296,7 +1296,7 @@
       },
       {
         "ticker": "CRWD",
-        "name": "CRWD",
+        "name": "CrowdStrike",
         "market": "US",
         "currency": "USD",
         "price": 252.13,
@@ -1312,7 +1312,7 @@
       },
       {
         "ticker": "INTC",
-        "name": "INTC",
+        "name": "Intel",
         "market": "US",
         "currency": "USD",
         "price": 123.0,
@@ -1328,7 +1328,7 @@
       },
       {
         "ticker": "ILMN",
-        "name": "ILMN",
+        "name": "Illumina, Inc.",
         "market": "US",
         "currency": "USD",
         "price": 270.0,
@@ -1343,8 +1343,24 @@
         "target_price": 295.68
       },
       {
+        "ticker": "ALAB",
+        "name": "Astera Labs",
+        "market": "US",
+        "currency": "USD",
+        "price": 364.62,
+        "ret_1m": 19.91,
+        "ret_3m": -20.03,
+        "rsi": 62.7,
+        "score": 46.79,
+        "shares": 33,
+        "alloc_man": 186,
+        "entry_price": 357.96,
+        "stop_price": 332.9,
+        "target_price": 411.65
+      },
+      {
         "ticker": "MU",
-        "name": "MU",
+        "name": "Micron Technology",
         "market": "US",
         "currency": "USD",
         "price": 1082.28,
@@ -1357,22 +1373,6 @@
         "entry_price": 1074.96,
         "stop_price": 999.71,
         "target_price": 1189.1
-      },
-      {
-        "ticker": "SNDK",
-        "name": "SNDK",
-        "market": "US",
-        "currency": "USD",
-        "price": 1777.8,
-        "ret_1m": 19.72,
-        "ret_3m": -13.29,
-        "rsi": 52.2,
-        "score": 41.64,
-        "shares": 7,
-        "alloc_man": 187,
-        "entry_price": 1701.07,
-        "stop_price": 1582.0,
-        "target_price": 1956.23
       },
       {
         "ticker": "2737.T",
@@ -1471,8 +1471,8 @@
         "target_price": 718.34
       }
     ],
-    "total_alloc_man": 2679,
-    "remaining_man": 321,
-    "max_loss_man": 188
+    "total_alloc_man": 2677,
+    "remaining_man": 323,
+    "max_loss_man": 187
   }
 }
