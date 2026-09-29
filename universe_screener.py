@@ -226,6 +226,7 @@ def batch_download(tickers: list[str], period: str = "1y", chunk_size: int = 100
     yfinance 1.3.x 対応: raw['Close'] が DataFrame[ticker] を返す
     """
     all_close  = {}
+    all_raw    = {}  # 配当未調整の終値（前日比用、株式分割は調整済み）
     all_volume = {}
     total_chunks = (len(tickers) + chunk_size - 1) // chunk_size
 
@@ -236,7 +237,7 @@ def batch_download(tickers: list[str], period: str = "1y", chunk_size: int = 100
         try:
             raw = yf.download(
                 chunk, period=period,
-                auto_adjust=True, progress=False,
+                auto_adjust=False, progress=False,
                 threads=True
             )
             if raw is None or raw.empty:
@@ -245,13 +246,16 @@ def batch_download(tickers: list[str], period: str = "1y", chunk_size: int = 100
             # yfinance 1.3.x: columns = MultiIndex (Price, Ticker)
             # raw["Close"] -> DataFrame indexed by Date, columns = tickers
             try:
-                close_part  = raw["Close"]
+                # Adj Close = auto_adjust=True の Close と同じ（配当・分割調整済み）
+                close_part  = raw["Adj Close"]
+                raw_part    = raw["Close"]
                 volume_part = raw["Volume"]
 
                 if isinstance(close_part, pd.Series):
                     # 1銘柄のとき Series になる
                     t = chunk[0]
                     all_close[t]  = close_part
+                    all_raw[t]    = raw_part
                     all_volume[t] = volume_part
                 else:
                     # 複数銘柄のとき DataFrame
@@ -259,6 +263,7 @@ def batch_download(tickers: list[str], period: str = "1y", chunk_size: int = 100
                         s = close_part[t].dropna()
                         if len(s) >= 21:
                             all_close[t]  = close_part[t]
+                            all_raw[t]    = raw_part[t]
                             all_volume[t] = volume_part[t] if t in volume_part.columns else pd.Series(dtype=float)
             except (KeyError, TypeError):
                 pass
@@ -270,6 +275,8 @@ def batch_download(tickers: list[str], period: str = "1y", chunk_size: int = 100
     print(f"  ダウンロード完了: {len(all_close)}銘柄分の価格データ取得          ")
     close_df  = pd.DataFrame(all_close) if all_close else pd.DataFrame()
     volume_df = pd.DataFrame(all_volume) if all_volume else pd.DataFrame()
+    # 前日比は証券会社の表示に合わせて配当未調整の終値で計算する（calc_momentum_scores で使用）
+    close_df.attrs["raw_close"] = pd.DataFrame(all_raw) if all_raw else pd.DataFrame()
     return close_df, volume_df
 
 
@@ -281,6 +288,7 @@ def calc_momentum_scores(close_df: pd.DataFrame, volume_df: pd.DataFrame,
                          market_map: dict[str, str]) -> pd.DataFrame:
     results = []
     tickers = close_df.columns.tolist()
+    raw_close = close_df.attrs.get("raw_close", pd.DataFrame())
 
     for ticker in tickers:
         try:
@@ -290,6 +298,10 @@ def calc_momentum_scores(close_df: pd.DataFrame, volume_df: pd.DataFrame,
 
             price     = float(s.iloc[-1])
             prev      = float(s.iloc[-2])
+            # 前日比: 配当未調整の終値で計算（権利落ち日に配当分がずれないように）
+            r = raw_close[ticker].dropna() if ticker in raw_close.columns else s
+            if len(r) >= 2 and r.index[-1] == s.index[-1]:
+                price, prev = float(r.iloc[-1]), float(r.iloc[-2])
             day_chg   = (price - prev) / prev * 100
 
             high_52w  = float(s.max())
