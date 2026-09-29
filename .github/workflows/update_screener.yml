@@ -2,10 +2,10 @@ name: Daily Momentum Screener Update
 
 on:
   schedule:
-    # 毎日 日本時間 8:00 に実行 (UTCの23:00)
-    - cron: '0 23 * * *'
-    # 毎日 日本時間 17:00 に実行 (UTCの8:00) ※東証大引け後
-    - cron: '0 8 * * *'
+    # 毎日 日本時間 6:00 に実行 (UTCの21:00) ※米国市場の引け後
+    - cron: '0 21 * * *'
+    # 毎日 日本時間 16:00 に実行 (UTCの7:00) ※東証大引け後
+    - cron: '0 7 * * *'
   # 手動実行も可能にする
   workflow_dispatch:
 
