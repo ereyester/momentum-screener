@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-30 18:25:25",
+  "updated_at": "2026-09-30 22:26:21",
   "total_scanned": 3625,
   "stats": {
     "us_count": 518,
@@ -7,7 +7,7 @@
     "avg_score_us": 0.68,
     "avg_score_jp": 3.85
   },
-  "usdjpy": 157.04,
+  "usdjpy": 156.84,
   "ranking": [
     {
       "rank": 1,
@@ -227,30 +227,6 @@
     },
     {
       "rank": 10,
-      "ticker": "4933.T",
-      "name": "Ｉ－ｎｅ",
-      "market": "JP",
-      "currency": "JPY",
-      "price": 2124.0,
-      "day_chg": -4.11,
-      "ret_1m": 43.81,
-      "ret_3m": 85.5,
-      "ret_6m": 91.75,
-      "ret_1y": 52.3,
-      "ytd_chg": 63.06,
-      "rsi": 73.6,
-      "from_ath": -11.83,
-      "vol_ratio": 0.55,
-      "volatility": 0.07,
-      "score": 61.52,
-      "ma5": 2242.4,
-      "ma20": 1773.6,
-      "ma50": 1512.86,
-      "high_52w": 2409.0,
-      "low_52w": 1026.16
-    },
-    {
-      "rank": 11,
       "ticker": "DELL",
       "name": "Dell Technologies",
       "market": "US",
@@ -272,6 +248,30 @@
       "ma50": 481.82,
       "high_52w": 588.4,
       "low_52w": 110.54
+    },
+    {
+      "rank": 11,
+      "ticker": "4933.T",
+      "name": "Ｉ－ｎｅ",
+      "market": "JP",
+      "currency": "JPY",
+      "price": 2124.0,
+      "day_chg": -4.11,
+      "ret_1m": 43.81,
+      "ret_3m": 85.5,
+      "ret_6m": 91.75,
+      "ret_1y": 52.3,
+      "ytd_chg": 63.06,
+      "rsi": 73.6,
+      "from_ath": -11.83,
+      "vol_ratio": 0.55,
+      "volatility": 0.07,
+      "score": 61.52,
+      "ma5": 2242.4,
+      "ma20": 1773.6,
+      "ma50": 1512.86,
+      "high_52w": 2409.0,
+      "low_52w": 1026.16
     },
     {
       "rank": 12,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 157.04,
+    "usdjpy": 156.84,
     "sets": {
       "MIX": [
         "MRNA",
@@ -1224,8 +1224,8 @@
         "6904.T",
         "4440.T",
         "3787.T",
-        "4933.T",
         "DELL",
+        "4933.T",
         "6533.T",
         "6998.T",
         "P",
@@ -1573,7 +1573,7 @@
         "rsi": 85.3,
         "score": 49.44,
         "shares": 30,
-        "alloc_man": 127,
+        "alloc_man": 126,
         "entry_price": 268.64,
         "stop_price": 249.84,
         "target_price": 308.94
@@ -1627,8 +1627,8 @@
         "target_price": 298.3
       }
     ],
-    "total_alloc_man": 2676,
-    "remaining_man": 324,
+    "total_alloc_man": 2675,
+    "remaining_man": 325,
     "max_loss_man": 187
   }
 }
