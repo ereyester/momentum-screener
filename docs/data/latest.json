@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04 22:06:14",
+  "updated_at": "2026-10-05 08:53:01",
   "total_scanned": 3624,
   "stats": {
     "us_count": 518,
@@ -7,7 +7,7 @@
     "avg_score_us": 0.06,
     "avg_score_jp": 3.27
   },
-  "usdjpy": 157.83,
+  "usdjpy": 157.76,
   "ranking": [
     {
       "rank": 1,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 157.83,
+    "usdjpy": 157.76,
     "sets": {
       "MIX": [
         "MRNA",
@@ -1589,7 +1589,7 @@
         "rsi": 80.9,
         "score": 46.38,
         "shares": 25,
-        "alloc_man": 127,
+        "alloc_man": 126,
         "entry_price": 320.64,
         "stop_price": 298.2,
         "target_price": 368.74
@@ -1627,8 +1627,8 @@
         "target_price": 48.18
       }
     ],
-    "total_alloc_man": 2695,
-    "remaining_man": 305,
+    "total_alloc_man": 2694,
+    "remaining_man": 306,
     "max_loss_man": 189
   }
 }
