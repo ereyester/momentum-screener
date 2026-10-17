@@ -1,8 +1,8 @@
 {
-  "updated_at": "2026-10-17 08:18:34",
-  "total_scanned": 3617,
+  "updated_at": "2026-10-17 20:24:32",
+  "total_scanned": 3616,
   "stats": {
-    "us_count": 517,
+    "us_count": 516,
     "jp_count": 3100,
     "avg_score_us": 1.93,
     "avg_score_jp": 2.86
@@ -840,7 +840,7 @@
       "ytd_chg": 192.85,
       "rsi": 85.9,
       "from_ath": -1.41,
-      "vol_ratio": 0.76,
+      "vol_ratio": 0.77,
       "volatility": 0.026,
       "score": 44.93,
       "ma5": 475.14,
