@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18 21:00:27",
+  "updated_at": "2026-10-19 07:49:11",
   "total_scanned": 3617,
   "stats": {
     "us_count": 517,
@@ -7,7 +7,7 @@
     "avg_score_us": 1.93,
     "avg_score_jp": 2.86
   },
-  "usdjpy": 157.99,
+  "usdjpy": 157.91,
   "ranking": [
     {
       "rank": 1,
@@ -275,30 +275,6 @@
     },
     {
       "rank": 12,
-      "ticker": "3787.T",
-      "name": "テクノマセマティカル",
-      "market": "JP",
-      "currency": "JPY",
-      "price": 680.0,
-      "day_chg": 0.29,
-      "ret_1m": 72.15,
-      "ret_3m": 136.11,
-      "ret_6m": 17.04,
-      "ret_1y": 22.52,
-      "ytd_chg": 13.52,
-      "rsi": 88.1,
-      "from_ath": -7.23,
-      "vol_ratio": 2.38,
-      "volatility": 0.115,
-      "score": 73.1,
-      "ma5": 677.6,
-      "ma20": 492.25,
-      "ma50": 372.4,
-      "high_52w": 733.0,
-      "low_52w": 258.0
-    },
-    {
-      "rank": 13,
       "ticker": "4616.T",
       "name": "川上塗料",
       "market": "JP",
@@ -322,7 +298,7 @@
       "low_52w": 1771.0
     },
     {
-      "rank": 14,
+      "rank": 13,
       "ticker": "3131.T",
       "name": "シンデン・ハイテックス",
       "market": "JP",
@@ -346,7 +322,7 @@
       "low_52w": 2483.8
     },
     {
-      "rank": 15,
+      "rank": 14,
       "ticker": "7552.T",
       "name": "ハピネット",
       "market": "JP",
@@ -370,7 +346,7 @@
       "low_52w": 2512.19
     },
     {
-      "rank": 16,
+      "rank": 15,
       "ticker": "3040.T",
       "name": "ソリトンシステムズ",
       "market": "JP",
@@ -394,7 +370,7 @@
       "low_52w": 1434.43
     },
     {
-      "rank": 17,
+      "rank": 16,
       "ticker": "3143.T",
       "name": "オーウイル",
       "market": "JP",
@@ -418,7 +394,7 @@
       "low_52w": 631.56
     },
     {
-      "rank": 18,
+      "rank": 17,
       "ticker": "3762.T",
       "name": "テクマトリックス",
       "market": "JP",
@@ -442,7 +418,7 @@
       "low_52w": 1596.57
     },
     {
-      "rank": 19,
+      "rank": 18,
       "ticker": "3297.T",
       "name": "東武住販",
       "market": "JP",
@@ -466,7 +442,7 @@
       "low_52w": 1061.0
     },
     {
-      "rank": 20,
+      "rank": 19,
       "ticker": "5133.T",
       "name": "テリロジーホールディングス",
       "market": "JP",
@@ -490,7 +466,7 @@
       "low_52w": 272.0
     },
     {
-      "rank": 21,
+      "rank": 20,
       "ticker": "6862.T",
       "name": "ミナトホールディングス",
       "market": "JP",
@@ -514,7 +490,7 @@
       "low_52w": 794.15
     },
     {
-      "rank": 22,
+      "rank": 21,
       "ticker": "6904.T",
       "name": "原田工業",
       "market": "JP",
@@ -538,7 +514,7 @@
       "low_52w": 441.0
     },
     {
-      "rank": 23,
+      "rank": 22,
       "ticker": "2962.T",
       "name": "テクニスコ",
       "market": "JP",
@@ -562,7 +538,7 @@
       "low_52w": 346.0
     },
     {
-      "rank": 24,
+      "rank": 23,
       "ticker": "7713.T",
       "name": "シグマ光機",
       "market": "JP",
@@ -586,7 +562,7 @@
       "low_52w": 1443.68
     },
     {
-      "rank": 25,
+      "rank": 24,
       "ticker": "3907.T",
       "name": "シリコンスタジオ",
       "market": "JP",
@@ -610,7 +586,7 @@
       "low_52w": 569.0
     },
     {
-      "rank": 26,
+      "rank": 25,
       "ticker": "3156.T",
       "name": "レスター",
       "market": "JP",
@@ -634,7 +610,7 @@
       "low_52w": 2399.6
     },
     {
-      "rank": 27,
+      "rank": 26,
       "ticker": "6532.T",
       "name": "ベイカレント",
       "market": "JP",
@@ -658,7 +634,7 @@
       "low_52w": 3782.32
     },
     {
-      "rank": 28,
+      "rank": 27,
       "ticker": "6668.T",
       "name": "アドテック　プラズマ　テクノロジー",
       "market": "JP",
@@ -682,7 +658,7 @@
       "low_52w": 1172.67
     },
     {
-      "rank": 29,
+      "rank": 28,
       "ticker": "6191.T",
       "name": "エアトリ",
       "market": "JP",
@@ -706,7 +682,7 @@
       "low_52w": 593.78
     },
     {
-      "rank": 30,
+      "rank": 29,
       "ticker": "6098.T",
       "name": "リクルートホールディングス",
       "market": "JP",
@@ -730,7 +706,7 @@
       "low_52w": 6097.45
     },
     {
-      "rank": 31,
+      "rank": 30,
       "ticker": "4746.T",
       "name": "東計電算",
       "market": "JP",
@@ -754,7 +730,7 @@
       "low_52w": 908.34
     },
     {
-      "rank": 32,
+      "rank": 31,
       "ticker": "7480.T",
       "name": "スズデン",
       "market": "JP",
@@ -778,7 +754,7 @@
       "low_52w": 1522.69
     },
     {
-      "rank": 33,
+      "rank": 32,
       "ticker": "3374.T",
       "name": "内外テック",
       "market": "JP",
@@ -802,7 +778,7 @@
       "low_52w": 1917.8
     },
     {
-      "rank": 34,
+      "rank": 33,
       "ticker": "3753.T",
       "name": "フライトソリューションズ",
       "market": "JP",
@@ -826,7 +802,7 @@
       "low_52w": 131.0
     },
     {
-      "rank": 35,
+      "rank": 34,
       "ticker": "MPC",
       "name": "Marathon Petroleum",
       "market": "US",
@@ -850,7 +826,7 @@
       "low_52w": 160.76
     },
     {
-      "rank": 36,
+      "rank": 35,
       "ticker": "P",
       "name": "Everpure",
       "market": "US",
@@ -874,7 +850,7 @@
       "low_52w": 56.99
     },
     {
-      "rank": 37,
+      "rank": 36,
       "ticker": "VEEV",
       "name": "Veeva Systems",
       "market": "US",
@@ -898,7 +874,7 @@
       "low_52w": 151.43
     },
     {
-      "rank": 38,
+      "rank": 37,
       "ticker": "8848.T",
       "name": "レオパレス２１",
       "market": "JP",
@@ -922,7 +898,7 @@
       "low_52w": 609.0
     },
     {
-      "rank": 39,
+      "rank": 38,
       "ticker": "PTC",
       "name": "PTC Inc.",
       "market": "US",
@@ -946,7 +922,7 @@
       "low_52w": 112.33
     },
     {
-      "rank": 40,
+      "rank": 39,
       "ticker": "6027.T",
       "name": "弁護士ドットコム",
       "market": "JP",
@@ -970,7 +946,7 @@
       "low_52w": 2009.0
     },
     {
-      "rank": 41,
+      "rank": 40,
       "ticker": "4840.T",
       "name": "トライアイズ",
       "market": "JP",
@@ -994,7 +970,7 @@
       "low_52w": 429.0
     },
     {
-      "rank": 42,
+      "rank": 41,
       "ticker": "6138.T",
       "name": "ダイジェット工業",
       "market": "JP",
@@ -1018,7 +994,7 @@
       "low_52w": 835.01
     },
     {
-      "rank": 43,
+      "rank": 42,
       "ticker": "9889.T",
       "name": "ＪＢＣＣホールディングス",
       "market": "JP",
@@ -1042,7 +1018,7 @@
       "low_52w": 1132.8
     },
     {
-      "rank": 44,
+      "rank": 43,
       "ticker": "6730.T",
       "name": "アクセル",
       "market": "JP",
@@ -1066,7 +1042,7 @@
       "low_52w": 1015.0
     },
     {
-      "rank": 45,
+      "rank": 44,
       "ticker": "2531.T",
       "name": "宝ホールディングス",
       "market": "JP",
@@ -1090,7 +1066,7 @@
       "low_52w": 1373.2
     },
     {
-      "rank": 46,
+      "rank": 45,
       "ticker": "6977.T",
       "name": "日本抵抗器製作所",
       "market": "JP",
@@ -1114,7 +1090,7 @@
       "low_52w": 845.62
     },
     {
-      "rank": 47,
+      "rank": 46,
       "ticker": "3132.T",
       "name": "マクニカホールディングス",
       "market": "JP",
@@ -1138,7 +1114,7 @@
       "low_52w": 2009.3
     },
     {
-      "rank": 48,
+      "rank": 47,
       "ticker": "2492.T",
       "name": "インフォマート",
       "market": "JP",
@@ -1162,7 +1138,7 @@
       "low_52w": 310.74
     },
     {
-      "rank": 49,
+      "rank": 48,
       "ticker": "4714.T",
       "name": "リソー教育グループ",
       "market": "JP",
@@ -1186,7 +1162,7 @@
       "low_52w": 185.58
     },
     {
-      "rank": 50,
+      "rank": 49,
       "ticker": "6998.T",
       "name": "日本タングステン",
       "market": "JP",
@@ -1208,11 +1184,35 @@
       "ma50": 3457.07,
       "high_52w": 4270.0,
       "low_52w": 1294.82
+    },
+    {
+      "rank": 50,
+      "ticker": "2612.T",
+      "name": "かどや製油",
+      "market": "JP",
+      "currency": "JPY",
+      "price": 2810.0,
+      "day_chg": -3.0,
+      "ret_1m": 16.16,
+      "ret_3m": 55.25,
+      "ret_6m": 76.95,
+      "ret_1y": 129.83,
+      "ytd_chg": 116.87,
+      "rsi": 40.1,
+      "from_ath": -3.0,
+      "vol_ratio": 2.05,
+      "volatility": 0.037,
+      "score": 38.43,
+      "ma5": 2857.6,
+      "ma20": 2852.1,
+      "ma50": 2304.4,
+      "high_52w": 2897.0,
+      "low_52w": 1222.62
     }
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 157.99,
+    "usdjpy": 157.91,
     "sets": {
       "MIX": [
         "3909.T",
@@ -1226,11 +1226,11 @@
         "2737.T",
         "6721.T",
         "4933.T",
-        "3787.T",
         "4616.T",
         "3131.T",
         "7552.T",
-        "3040.T"
+        "3040.T",
+        "3143.T"
       ],
       "US": [
         "MRNA",
@@ -1435,22 +1435,6 @@
         "target_price": 3094.36
       },
       {
-        "ticker": "3787.T",
-        "name": "テクノマセマティカル",
-        "market": "JP",
-        "currency": "JPY",
-        "price": 680.0,
-        "ret_1m": 72.15,
-        "ret_3m": 136.11,
-        "rsi": 88.1,
-        "score": 73.1,
-        "shares": 1700,
-        "alloc_man": 115,
-        "entry_price": 677.6,
-        "stop_price": 630.17,
-        "target_price": 718.34
-      },
-      {
         "ticker": "4616.T",
         "name": "川上塗料",
         "market": "JP",
@@ -1515,6 +1499,22 @@
         "target_price": 4059.03
       },
       {
+        "ticker": "3143.T",
+        "name": "オーウイル",
+        "market": "JP",
+        "currency": "JPY",
+        "price": 1183.0,
+        "ret_1m": 68.66,
+        "ret_3m": 74.62,
+        "rsi": 91.1,
+        "score": 63.35,
+        "shares": 1000,
+        "alloc_man": 114,
+        "entry_price": 1143.6,
+        "stop_price": 1063.55,
+        "target_price": 1536.2
+      },
+      {
         "ticker": "MPC",
         "name": "Marathon Petroleum",
         "market": "US",
@@ -1573,7 +1573,7 @@
         "rsi": 90.8,
         "score": 42.16,
         "shares": 45,
-        "alloc_man": 119,
+        "alloc_man": 118,
         "entry_price": 166.72,
         "stop_price": 155.05,
         "target_price": 201.74
@@ -1659,8 +1659,8 @@
         "target_price": 175.64
       }
     ],
-    "total_alloc_man": 2675,
-    "remaining_man": 325,
+    "total_alloc_man": 2673,
+    "remaining_man": 327,
     "max_loss_man": 187
   }
 }
