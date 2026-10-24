@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-24 08:48:57",
+  "updated_at": "2026-10-24 20:54:04",
   "total_scanned": 3621,
   "stats": {
     "us_count": 517,
@@ -816,7 +816,7 @@
       "ytd_chg": 70.62,
       "rsi": 69.5,
       "from_ath": 0.0,
-      "vol_ratio": 0.74,
+      "vol_ratio": 0.75,
       "volatility": 0.031,
       "score": 40.61,
       "ma5": 329.07,
@@ -1152,7 +1152,7 @@
       "ytd_chg": 7.81,
       "rsi": 78.1,
       "from_ath": -16.01,
-      "vol_ratio": 0.98,
+      "vol_ratio": 0.99,
       "volatility": 0.025,
       "score": 35.14,
       "ma5": 152.8,
