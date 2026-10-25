@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25 21:24:24",
+  "updated_at": "2026-10-26 08:05:38",
   "total_scanned": 3621,
   "stats": {
     "us_count": 517,
@@ -7,7 +7,7 @@
     "avg_score_us": 2.66,
     "avg_score_jp": 0.27
   },
-  "usdjpy": 156.81,
+  "usdjpy": 156.99,
   "ranking": [
     {
       "rank": 1,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 156.81,
+    "usdjpy": 156.99,
     "sets": {
       "MIX": [
         "3909.T",
@@ -1589,7 +1589,7 @@
         "rsi": 63.7,
         "score": 40.14,
         "shares": 39,
-        "alloc_man": 118,
+        "alloc_man": 119,
         "entry_price": 193.72,
         "stop_price": 180.16,
         "target_price": 232.76
@@ -1605,7 +1605,7 @@
         "rsi": 43.5,
         "score": 38.69,
         "shares": 32,
-        "alloc_man": 119,
+        "alloc_man": 120,
         "entry_price": 238.06,
         "stop_price": 221.4,
         "target_price": 273.28
@@ -1653,14 +1653,14 @@
         "rsi": 37.0,
         "score": 33.72,
         "shares": 29,
-        "alloc_man": 116,
+        "alloc_man": 117,
         "entry_price": 255.95,
         "stop_price": 238.03,
         "target_price": 287.82
       }
     ],
-    "total_alloc_man": 2754,
-    "remaining_man": 246,
+    "total_alloc_man": 2755,
+    "remaining_man": 245,
     "max_loss_man": 193
   }
 }
