@@ -1,9 +1,9 @@
 {
-  "updated_at": "2026-11-01 08:58:22",
-  "total_scanned": 3618,
+  "updated_at": "2026-11-01 23:05:01",
+  "total_scanned": 3619,
   "stats": {
     "us_count": 518,
-    "jp_count": 3100,
+    "jp_count": 3101,
     "avg_score_us": 3.07,
     "avg_score_jp": 0.03
   },
