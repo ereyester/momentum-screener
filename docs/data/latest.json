@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-07 09:40:41",
+  "updated_at": "2026-11-07 22:48:16",
   "total_scanned": 3621,
   "stats": {
     "us_count": 518,
     "jp_count": 3103,
-    "avg_score_us": 1.12,
+    "avg_score_us": 1.13,
     "avg_score_jp": -4.38
   },
-  "usdjpy": 157.5,
+  "usdjpy": 158.43,
   "ranking": [
     {
       "rank": 1,
@@ -714,20 +714,20 @@
       "price": 2076.0,
       "day_chg": 8.18,
       "ret_1m": 4.74,
-      "ret_3m": 55.02,
-      "ret_6m": 62.6,
-      "ret_1y": 53.79,
-      "ytd_chg": 52.18,
+      "ret_3m": 55.41,
+      "ret_6m": 63.01,
+      "ret_1y": 54.18,
+      "ytd_chg": 52.57,
       "rsi": 54.3,
-      "from_ath": -3.69,
+      "from_ath": -3.45,
       "vol_ratio": 6.97,
       "volatility": 0.033,
-      "score": 30.92,
+      "score": 31.12,
       "ma5": 1973.6,
       "ma20": 1969.6,
-      "ma50": 2010.77,
-      "high_52w": 2155.57,
-      "low_52w": 1175.32
+      "ma50": 2008.39,
+      "high_52w": 2150.12,
+      "low_52w": 1172.35
     },
     {
       "rank": 31,
@@ -1128,7 +1128,7 @@
       "ytd_chg": 38.38,
       "rsi": 38.0,
       "from_ath": -5.98,
-      "vol_ratio": 0.95,
+      "vol_ratio": 1.1,
       "volatility": 0.019,
       "score": 27.67,
       "ma5": 306.93,
@@ -1170,20 +1170,20 @@
       "price": 476.6,
       "day_chg": -2.92,
       "ret_1m": 30.9,
-      "ret_3m": 19.3,
-      "ret_6m": 45.31,
-      "ret_1y": 7.37,
-      "ytd_chg": 10.23,
+      "ret_3m": 19.6,
+      "ret_6m": 45.68,
+      "ret_1y": 7.64,
+      "ytd_chg": 10.51,
       "rsi": 80.6,
       "from_ath": -3.17,
       "vol_ratio": 0.92,
       "volatility": 0.027,
-      "score": 27.21,
+      "score": 27.38,
       "ma5": 482.58,
       "ma20": 428.66,
-      "ma50": 399.06,
+      "ma50": 398.6,
       "high_52w": 492.22,
-      "low_52w": 313.94
+      "low_52w": 313.15
     },
     {
       "rank": 50,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 157.5,
+    "usdjpy": 158.43,
     "sets": {
       "MIX": [
         "MRNA",
@@ -1524,8 +1524,8 @@
         "ret_3m": 46.03,
         "rsi": 62.7,
         "score": 34.89,
-        "shares": 30,
-        "alloc_man": 120,
+        "shares": 29,
+        "alloc_man": 117,
         "entry_price": 253.67,
         "stop_price": 235.91,
         "target_price": 274.85
@@ -1557,7 +1557,7 @@
         "rsi": 38.0,
         "score": 27.67,
         "shares": 26,
-        "alloc_man": 118,
+        "alloc_man": 119,
         "entry_price": 288.54,
         "stop_price": 268.35,
         "target_price": 316.58
@@ -1573,7 +1573,7 @@
         "rsi": 62.7,
         "score": 27.48,
         "shares": 77,
-        "alloc_man": 119,
+        "alloc_man": 120,
         "entry_price": 98.08,
         "stop_price": 91.21,
         "target_price": 112.79
@@ -1585,11 +1585,11 @@
         "currency": "USD",
         "price": 476.6,
         "ret_1m": 30.9,
-        "ret_3m": 19.3,
+        "ret_3m": 19.6,
         "rsi": 80.6,
-        "score": 27.21,
+        "score": 27.38,
         "shares": 16,
-        "alloc_man": 117,
+        "alloc_man": 118,
         "entry_price": 464.59,
         "stop_price": 432.07,
         "target_price": 536.37
@@ -1605,7 +1605,7 @@
         "rsi": 70.7,
         "score": 27.05,
         "shares": 18,
-        "alloc_man": 118,
+        "alloc_man": 119,
         "entry_price": 416.46,
         "stop_price": 387.31,
         "target_price": 463.31
@@ -1620,8 +1620,8 @@
         "ret_3m": 11.39,
         "rsi": 83.6,
         "score": 24.9,
-        "shares": 68,
-        "alloc_man": 120,
+        "shares": 67,
+        "alloc_man": 119,
         "entry_price": 111.96,
         "stop_price": 104.12,
         "target_price": 128.75
@@ -1637,7 +1637,7 @@
         "rsi": 84.4,
         "score": 24.03,
         "shares": 127,
-        "alloc_man": 119,
+        "alloc_man": 120,
         "entry_price": 59.6,
         "stop_price": 55.43,
         "target_price": 68.45
@@ -1652,8 +1652,8 @@
         "ret_3m": 23.46,
         "rsi": 85.3,
         "score": 23.38,
-        "shares": 68,
-        "alloc_man": 119,
+        "shares": 67,
+        "alloc_man": 118,
         "entry_price": 111.5,
         "stop_price": 103.7,
         "target_price": 128.22
