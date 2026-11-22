@@ -1,11 +1,11 @@
 {
-  "updated_at": "2026-11-22 09:56:43",
-  "total_scanned": 3620,
+  "updated_at": "2026-11-23 00:04:50",
+  "total_scanned": 3621,
   "stats": {
     "us_count": 518,
-    "jp_count": 3102,
+    "jp_count": 3103,
     "avg_score_us": -3.93,
-    "avg_score_jp": -5.0
+    "avg_score_jp": -5.01
   },
   "usdjpy": 159.71,
   "ranking": [
