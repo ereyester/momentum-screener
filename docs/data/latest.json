@@ -1,13 +1,13 @@
 {
-  "updated_at": "2026-11-23 00:04:50",
-  "total_scanned": 3621,
+  "updated_at": "2026-11-23 10:24:37",
+  "total_scanned": 3620,
   "stats": {
-    "us_count": 518,
+    "us_count": 517,
     "jp_count": 3103,
-    "avg_score_us": -3.93,
+    "avg_score_us": -3.94,
     "avg_score_jp": -5.01
   },
-  "usdjpy": 159.71,
+  "usdjpy": 158.84,
   "ranking": [
     {
       "rank": 1,
@@ -1212,7 +1212,7 @@
   ],
   "deck": {
     "budget_man": 3000,
-    "usdjpy": 159.71,
+    "usdjpy": 158.84,
     "sets": {
       "MIX": [
         "3909.T",
@@ -1525,7 +1525,7 @@
         "rsi": 53.3,
         "score": 30.74,
         "shares": 39,
-        "alloc_man": 118,
+        "alloc_man": 117,
         "entry_price": 189.34,
         "stop_price": 176.09,
         "target_price": 217.74
@@ -1541,7 +1541,7 @@
         "rsi": 51.4,
         "score": 19.42,
         "shares": 11,
-        "alloc_man": 116,
+        "alloc_man": 115,
         "entry_price": 658.69,
         "stop_price": 612.58,
         "target_price": 751.35
@@ -1573,7 +1573,7 @@
         "rsi": 40.3,
         "score": 18.04,
         "shares": 8,
-        "alloc_man": 117,
+        "alloc_man": 116,
         "entry_price": 912.02,
         "stop_price": 848.18,
         "target_price": 1048.82
@@ -1588,8 +1588,8 @@
         "ret_3m": 18.24,
         "rsi": 53.6,
         "score": 17.37,
-        "shares": 65,
-        "alloc_man": 119,
+        "shares": 66,
+        "alloc_man": 120,
         "entry_price": 114.36,
         "stop_price": 106.35,
         "target_price": 131.51
@@ -1605,7 +1605,7 @@
         "rsi": 68.4,
         "score": 16.64,
         "shares": 7,
-        "alloc_man": 117,
+        "alloc_man": 116,
         "entry_price": 1045.53,
         "stop_price": 972.34,
         "target_price": 1202.36
@@ -1637,7 +1637,7 @@
         "rsi": 62.8,
         "score": 15.88,
         "shares": 20,
-        "alloc_man": 116,
+        "alloc_man": 115,
         "entry_price": 363.16,
         "stop_price": 337.74,
         "target_price": 417.63
@@ -1659,8 +1659,8 @@
         "target_price": 1727.03
       }
     ],
-    "total_alloc_man": 2592,
-    "remaining_man": 408,
+    "total_alloc_man": 2588,
+    "remaining_man": 412,
     "max_loss_man": 181
   }
 }
